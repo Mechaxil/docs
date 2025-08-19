@@ -140,7 +140,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Mechaxil, Inc. Built with Docusaurus. <3 `,
+        copyright: `Copyright © ${new Date().getFullYear()} Mechaxil, Inc. Built with Docusaurus. `,
       },
       prism: {
         theme: prismThemes.github,
