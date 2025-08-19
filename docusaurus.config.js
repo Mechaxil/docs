@@ -11,7 +11,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Mechaxil',
-  tagline: 'Dinosaurs are cool',
+  tagline: 'Documentation for Mechaxil projects and tools',
   favicon: 'img/favicon.ico',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
@@ -32,6 +32,11 @@ const config = {
 
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
+
+  // 
+  stylesheets: [
+    'https://fonts.googleapis.com/css2?family=Lexend:wght@400;700&display=swap',
+  ],
 
   // Even if you don't use internationalization, you can use this field to set 
   // useful metadata like html lang. For example, if your site is Chinese, you
