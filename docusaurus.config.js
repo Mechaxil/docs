@@ -86,22 +86,22 @@ const config = {
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
-        title: 'My Site',
+        title: ' ',
         logo: {
           alt: 'My Site Logo',
-          src: 'img/logo.svg',
+          src: 'img/Banner_transparent.png',
         },
         items: [
           {
             type: 'docSidebar',
-            sidebarId: 'tutorialSidebar',
+            sidebarId: 'mainSidebar',
             position: 'left',
-            label: 'Tutorial',
+            label: 'Documentations',
           },
           {to: '/blog', label: 'Blog', position: 'left'},
           {
-            href: 'https://github.com/Mechaxil/docs',
-            label: 'GitHub',
+            href: 'https://mechaxil.com',
+            label: 'Webshop',
             position: 'right',
           },
         ],
@@ -113,7 +113,7 @@ const config = {
             title: 'Docs',
             items: [
               {
-                label: 'Tutorial',
+                label: 'Getting Started',
                 to: '/intro',
               },
             ],
@@ -129,6 +129,26 @@ const config = {
                 label: 'X',
                 href: 'https://x.com/mechaxil',
               },
+              {
+                label: 'Youtube',
+                href: 'https://www.youtube.com/@mechaxil',
+              },
+              {
+                label: 'Instagram',
+                href: 'https://www.instagram.com/mechaxil/',
+              },
+              {
+                label: 'Facebook',
+                href: 'https://www.facebook.com/profile.php?id=61579512782973',
+              },
+              {
+                label: 'TikTok',
+                href: 'https://www.tiktok.com/@mechaxil?lang=en',
+              },
+              {
+                label: 'MakerWorld',
+                href: 'https://makerworld.com/en/@Mechaxil',
+              }
             ],
           },
           {
@@ -139,8 +159,8 @@ const config = {
                 to: '/blog',
               },
               {
-                label: 'GitHub',
-                href: 'https://github.com/Mechaxil/docs',
+                label: 'Webshop',
+                href: 'https://mechaxil.com',
               },
             ],
           },
