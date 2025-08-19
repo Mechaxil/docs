@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
     <channel>
         <title>Mechaxil Blog</title>
-        <link>https://docs.mechaxil.com/blog</link>
+        <link>https://Mechaxil.github.io/blog</link>
         <description>Mechaxil Blog</description>
         <lastBuildDate>Tue, 19 Aug 2025 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
@@ -10,8 +10,8 @@
         <language>en</language>
         <item>
             <title><![CDATA[Greetings!]]></title>
-            <link>https://docs.mechaxil.com/blog/greetings</link>
-            <guid>https://docs.mechaxil.com/blog/greetings</guid>
+            <link>https://Mechaxil.github.io/blog/greetings</link>
+            <guid>https://Mechaxil.github.io/blog/greetings</guid>
             <pubDate>Tue, 19 Aug 2025 00:00:00 GMT</pubDate>
             <description><![CDATA[This is our first blog post!]]></description>
             <content:encoded><![CDATA[<p>This is our first blog post!</p>
