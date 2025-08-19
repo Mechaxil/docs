@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmechaxil_docs=self.webpackChunkmechaxil_docs||[]).push([[121],{8070:e=>{e.exports=JSON.parse('{"tags":[{"label":"greetings","permalink":"/blog/tags/greetings","count":1}]}')}}]);

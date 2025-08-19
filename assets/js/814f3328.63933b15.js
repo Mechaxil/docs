@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmechaxil_docs=self.webpackChunkmechaxil_docs||[]).push([[472],{5513:e=>{e.exports=JSON.parse('{"title":"Recent posts","items":[{"title":"Greetings!","permalink":"/blog/greetings","unlisted":false,"date":"2025-08-19T00:00:00.000Z"}]}')}}]);
