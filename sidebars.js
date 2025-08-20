@@ -22,7 +22,6 @@ const sidebars = {
       items: [
         'basics/boarding',
         'basics/projects',
-        'basics/test',
       ],
     },
     {
