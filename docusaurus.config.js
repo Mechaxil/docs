@@ -89,7 +89,7 @@ const config = {
         title: ' ',
         logo: {
           alt: 'My Site Logo',
-          src: 'img/Banner_transparent.png',
+          src: 'img/Banner_Transparent.png',
         },
         items: [
           {
@@ -114,7 +114,15 @@ const config = {
             items: [
               {
                 label: 'Getting Started',
-                to: '/intro',
+                to: 'docs/getting-started',
+              },
+              {
+                label: 'Solar Project',
+                to: 'docs/solar/overview',
+              },
+              {
+                label: 'Smart Agriculture Project',
+                to: 'docs/smart-ag/overview',
               },
             ],
           },

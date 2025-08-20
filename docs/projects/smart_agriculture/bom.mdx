@@ -1,0 +1,33 @@
+---
+slug: /smart-ag/bom
+title: Bill of Materials (BOM)
+sidebar_position: 2
+---
+
+import { useState } from 'react';
+import Checklist from '@site/src/components/Checklist'
+
+<!-- docs/smart-ag/bom.mdx -->
+
+# Smart Agriculture BOM
+
+<Checklist 
+project="smart-ag"
+items={[
+    "Microcontroller of choice",
+    "SOILCAP-V20",
+    "NC solenoid valve",
+    "MOSFET module",
+    "RTC module",
+    "BME280",
+    "Enclosure",
+    "Flow Sensor",
+    "SD Card Module",
+    "Tubing",
+    "Filters",
+    "Fuses",
+    "Multimeter",
+    "Soldering Iron",
+]} storageKey="shopping-list" />
+
+**Notes**: Add spare connectors, O-rings, and mounting hardware. For larger installations add manifold plates, extra valves, or a dedicated pump.

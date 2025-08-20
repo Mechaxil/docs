@@ -16,14 +16,46 @@
  */
 const sidebars = {
   mainSidebar: [
-    'intro', // links to docs/intro.md
     {
       type: 'category',
-      label: 'Getting Started', // <-- changed from "Tutorial"
+      label: 'Getting Started',
       items: [
-        'basics/Webshop_Navigation',
+        'basics/boarding',
+        'basics/projects',
+        'basics/test',
       ],
     },
+    {
+      type: 'category',
+      label: 'Projects',
+      items: [
+        {
+          type: 'category',
+          label: 'Solar',
+          items: [
+            'projects/solar/overview',
+            'projects/solar/bom',
+            'projects/solar/schematics',
+            'projects/solar/wiring',
+            'projects/solar/testing',
+            'projects/solar/firmware',
+          ],
+        },
+        {
+          type: 'category',
+          label: 'Smart Agriculture',
+          items: [
+            'projects/smart_agriculture/overview',
+            'projects/smart_agriculture/bom',
+            'projects/smart_agriculture/schematics',
+            'projects/smart_agriculture/calibration',
+            'projects/smart_agriculture/deployment',
+            'projects/smart_agriculture/firmware',
+          ],
+        },
+      ],
+    },
+
   ],
 };
 

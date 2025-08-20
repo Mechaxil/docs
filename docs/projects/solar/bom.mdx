@@ -1,0 +1,31 @@
+---
+slug: /solar/bom
+title: Bill of Materials (BOM)
+sidebar_position: 2
+---
+
+import { useState } from 'react';
+import Checklist from '@site/src/components/Checklist'
+
+<!-- docs/solar/bom.mdx -->
+
+# Solar BOM
+
+<Checklist 
+project="solar"
+items={[
+    "Microcontroller of choice",
+    "12 V 10 W solar panel",
+    "18650 Cell",
+    "1×18650 holder w/ wires",
+    "Solar Power Manager",
+    "Inline Fuse (PV Positive)",
+    "Enclosure",
+    "Cables",
+    "Crimper",
+    "Multimeter",
+    "Soldering Iron",
+]} storageKey="shopping-list" />
+
+
+**Notes**: Waveshare limits charging current. Don’t parallel raw cells without a proper battery management/pack. Add fuses on both PV and battery if deploying.
