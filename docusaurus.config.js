@@ -43,10 +43,10 @@ const config = {
   // may want to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'en',
-    locales: ['en', 'hu'],
+    locales: ['en', /**'hu'*/],
     localeConfigs: {
       en: { label: 'English' },
-      hu: { label: 'Magyar' },
+     // hu: { label: 'Magyar' },
     },
   },
 
