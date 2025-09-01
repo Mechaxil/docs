@@ -27,5 +27,9 @@ export const glossary = {
   "Li-ion Charging": {
     content: `<div>The process of charging lithium-ion batteries, which involves applying a controlled voltage and current to safely replenish the battery's energy.</div>`
     // no link needed
-  }
-};
+  },
+  "Development board of choice": {
+    content: `<div>A printed circuit board (PCB) that includes a microcontroller or microprocessor, along with necessary components and interfaces for prototyping and development.</div>`,
+    link: "https://mechaxil.com/collections/microcontrollers"
+  },
+  };

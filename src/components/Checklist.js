@@ -1,16 +1,15 @@
 import React, { useState, useEffect } from "react";
+import GlossaryTerm from "./glossaryTerm";
 
-const Checklist = ({project, items, storageKey = "my-checklist" }) => {
+const Checklist = ({ project, items, storageKey = "my-checklist" }) => {
   const namespacedKey = `${storageKey}:${project}`;
   const [checked, setChecked] = useState({});
 
-  // Load saved state on mount
   useEffect(() => {
     const saved = localStorage.getItem(namespacedKey);
     if (saved) setChecked(JSON.parse(saved));
   }, [namespacedKey]);
 
-  // Save whenever checked changes
   useEffect(() => {
     localStorage.setItem(namespacedKey, JSON.stringify(checked));
   }, [checked, namespacedKey]);
@@ -23,15 +22,19 @@ const Checklist = ({project, items, storageKey = "my-checklist" }) => {
   };
 
   return (
-    <div className="checklist">
+    <div classname="checklist">
       {items.map((item) => (
-        <label key={item} style={{ display: "block", margin: "4px 0" }}>
+        <label
+          key={item}
+          style={{ display: "flex", alignItems: "center", margin: "6px 0", gap: "8px" }}
+        >
           <input
             type="checkbox"
+            className="checklist-checkbox"
             checked={!!checked[item]}
             onChange={() => toggleItem(item)}
           />
-          {item}
+          <GlossaryTerm term={item}>{item}</GlossaryTerm>
         </label>
       ))}
     </div>
@@ -39,6 +42,3 @@ const Checklist = ({project, items, storageKey = "my-checklist" }) => {
 };
 
 export default Checklist;
-
-
-// TODO later add universal items such as microcontroller, cables, etc. since not all projects will have the same items but some will be common
