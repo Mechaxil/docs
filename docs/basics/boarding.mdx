@@ -4,6 +4,9 @@ title: Getting Started — Quick Overview
 sidebar_position: 0
 ---
 
+import GlossaryTerm from '@site/src/components/glossaryTerm'
+import Checklist from '@site/src/components/Checklist'
+
 # Getting Started — Quick Overview
 
 Welcome — this is the quick boarding page for you who found us from the webshop, socials, or somewhere else and want to get into a quick headstart in some of your projects.
@@ -12,10 +15,20 @@ If you landed here: nice. This page gets you set up fast, points to the project 
 
 ---
 
-## Quick links
+## Features
 
-- **Item database / webshop**: [Mechaxil Webshop](https://mechaxil.com)
-- **Support & Community**: [Discord](https://discord.gg/CecTK8quUc), [Twitter](https://x.com/mechaxil), [Instagram](https://www.instagram.com/mechaxil/), [Youtube](https://www.youtube.com/@mechaxil)
+First thing to familiarize yourself is how the documentation works, we implemented a few unique features to docusaurus (this entire page is based on it),
+- The most useful one is **<GlossaryTerm term="Tooltips without links" />** and **<GlossaryTerm term="Tooltips with links" />** the later usually serves as an easy 
+way to access a part of documentation or product on the webshop,
+- The other feature is a list of materials used for the project ( **<GlossaryTerm term="BOM" />** ) such as this:
+
+<Checklist 
+project="boarding"
+items={[
+    "Creativity",
+    "Willingness to learn",
+    "Fun",
+]} storageKey="shopping-list" />
 
 ---
 
@@ -26,18 +39,19 @@ If you landed here: nice. This page gets you set up fast, points to the project 
 
 ---
 
-## 3-step Quick Start (do this first)
+## 3-step Quick Start
 
-1. **Read the safety bits** — open the Project Overview and scan the “Warnings” section.
+1. **Read the safety bits** — Always scan the “Warnings” section first before proceeding with anything.
 2. **Check the BOM** — compare the parts you bought with the project BOM (Solar or Smart-Ag etc.). Get any missing safety gear (fuses, protection PCB, enclosure, safety gloves, glasses) before powering up.
 3. **Power it up, safely** — assemble in a dry workspace, add fuses, connect PV last. Run the basic commissioning tests in the Testing doc.
 
 ---
 
-## Safety — read this first
-- **Always** use a protected Li‑ion cell or a protection PCB with raw cells.  
-- Use fuses on PV and battery lines.  
-- Verify PV Voc ≤ the controller max (24 V for Waveshare).  
+## Safety
+- **Always** use safety gear especially if using Li‑ion cells and other dangerous items, a proper safety gear contains:
+    - Glasses
+    - Gloves
+    - Good ventillation (especially when soldering)
 - Do the commissioning checklist in the docs before leaving it unattended.
 
 ---
@@ -51,7 +65,7 @@ If you landed here: nice. This page gets you set up fast, points to the project 
 When asking for help, include: your SKU list, photos of wiring, battery voltage, PV Voc, and the module LEDs/status.
 
 ## Contributing & advanced users
-Want to help improve docs, examples, or firmware? Pull requests welcome on GitHub. Use the `firmware/` and `docs/` folders and follow the repository contribution notes.
+Want to help improve docs, examples, firmware or want to participate in our project bounty program? Pull requests welcome on GitHub. Use the `firmware/` and `docs/` folders and follow the repository contribution notes.
 
 ---
 
