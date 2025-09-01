@@ -1,4 +1,4 @@
-Attila_Zavoczki:
+attila-zavoczki:
   name: Attila Zavoczki
   title: Founder of Mechaxil
   url: https://github.com/McBlueFrog
@@ -7,4 +7,4 @@ Attila_Zavoczki:
   socials:
     linkedin: attila-zavoczki
     github: McBlueFrog
-    email: attilazavoczki@mechaxil.com 
+    email: "mailto:attilazavoczki@mechaxil.com"
