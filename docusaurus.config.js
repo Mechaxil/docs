@@ -93,7 +93,7 @@ const config = {
         title: ' ',
         logo: {
           alt: 'My Site Logo',
-          src: 'img/Banner_Transparent.png',
+          src: 'img/Mechaxil.png',
         },
         items: [
           {
