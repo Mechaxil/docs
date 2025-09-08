@@ -25,34 +25,34 @@ const sidebars = {
       ],
     },
     {
-      type: 'category',
-      label: 'Projects',
-      items: [
-        {
-          type: 'category',
-          label: 'Solar',
-          items: [
-            'projects/solar/overview',
-            'projects/solar/bom',
-            'projects/solar/schematics',
-            'projects/solar/wiring',
-            'projects/solar/testing',
-            'projects/solar/firmware',
-          ],
-        },
-        {
-          type: 'category',
-          label: 'Smart Agriculture',
-          items: [
-            'projects/smart_agriculture/overview',
-            'projects/smart_agriculture/bom',
-            'projects/smart_agriculture/schematics',
-            'projects/smart_agriculture/calibration',
-            'projects/smart_agriculture/deployment',
-            'projects/smart_agriculture/firmware',
-          ],
-        },
-      ],
+      // type: 'category',
+      // label: 'Projects',
+      // items: [
+      //   {
+      //     type: 'category',
+      //     label: 'Solar',
+      //     items: [
+      //       'projects/solar/overview',
+      //       'projects/solar/bom',
+      //       'projects/solar/schematics',
+      //       'projects/solar/wiring',
+      //       'projects/solar/testing',
+      //       'projects/solar/firmware',
+      //     ],
+      //   },
+      //   {
+      //     type: 'category',
+      //     label: 'Smart Agriculture',
+      //     items: [
+      //       'projects/smart_agriculture/overview',
+      //       'projects/smart_agriculture/bom',
+      //       'projects/smart_agriculture/schematics',
+      //       'projects/smart_agriculture/calibration',
+      //       'projects/smart_agriculture/deployment',
+      //       'projects/smart_agriculture/firmware',
+      //     ],
+      //   },
+      // ],
     },
 
   ],
