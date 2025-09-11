@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://docs.mechaxil.com/sitemap.xml

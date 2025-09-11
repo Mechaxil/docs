@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xsl" href="atom.xsl"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://Mechaxil.github.io/blog</id>
-    <title>Mechaxil Blog</title>
+    <id>https://docs.mechaxil.com/blog</id>
+    <title>Mechaxil Docs Blog</title>
     <updated>2025-08-19T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://Mechaxil.github.io/blog"/>
-    <subtitle>Mechaxil Blog</subtitle>
-    <icon>https://Mechaxil.github.io/img/favicon.ico</icon>
+    <link rel="alternate" href="https://docs.mechaxil.com/blog"/>
+    <subtitle>Mechaxil Docs Blog</subtitle>
+    <icon>https://docs.mechaxil.com/img/favicon.ico</icon>
     <entry>
         <title type="html"><![CDATA[Greetings!]]></title>
-        <id>https://Mechaxil.github.io/blog/greetings</id>
-        <link href="https://Mechaxil.github.io/blog/greetings"/>
+        <id>https://docs.mechaxil.com/blog/greetings</id>
+        <link href="https://docs.mechaxil.com/blog/greetings"/>
         <updated>2025-08-19T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[This is our first blog post!]]></summary>
         <content type="html"><![CDATA[<p>This is our first blog post!</p>
