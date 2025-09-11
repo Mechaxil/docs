@@ -1,0 +1,54 @@
+---
+id: rp2040-pico-w
+title: Raspberry Pi Pico W
+sidebar_label: Pico W
+slug: /products/rp2040-pico-w
+description: Raspberry Pi Pico W with RP2040 microcontroller and built-in Wi-Fi. Ideal for MicroPython, C/C++, and Rust projects.
+tags: [microcontroller, raspberry-pi, rp2040, wifi]
+image: /img/mechaxil.png
+---
+
+<img alt="Raspberry Pi Pico W" src="https://mechaxil.com/cdn/shop/files/raspberry_pico_1_W.png?v=1756557600" width="640" />
+
+> **SKU:** MX-RP2W • **Brand:** Raspberry Pi • **Type:** Microcontroller Board  
+
+
+## Highlights
+- Dual-core RP2040 @ 133 MHz  
+- 2.4 GHz Wi-Fi (Infineon CYW43439)  
+- 26× multi-function GPIO  
+- PIO state machines for custom protocols  
+- Works with MicroPython, C/C++, and Rust  
+
+## Specs
+
+| Field           | Value |
+|-----------------|-------|
+| Model           | Pico W |
+| MCU             | RP2040 dual-core Arm Cortex-M0+ @ 133 MHz |
+| RAM / Flash     | 264 KB SRAM / 2 MB QSPI Flash |
+| Wireless        | 2.4 GHz Wi-Fi (802.11n) |
+| GPIO            | 26 pins (I²C, SPI, UART, PWM, ADC) |
+| USB             | Micro-USB (device only) |
+| Supply Voltage  | 5 V USB or 1.8–5.5 V VSYS |
+| Dimensions      | 51 × 21 mm |
+| Certifications  | CE, FCC, RoHS |
+| HS Code         | 8471500000 |
+
+## Pinout Diagram
+
+![Raspberry Pi Pico W pinout](/img/products/rp2040-pico/pico-pinout.svg)
+
+*Pinout image courtesy of the Raspberry Pi Foundation. Licensed under CC BY-ND 4.0. [Source](https://github.com/raspberrypi/documentation/tree/0b1b995626a8d35ca52cabf9281f9363c3b044f6/documentation/asciidoc/microcontrollers/pico-series/images)*
+
+
+
+## Getting Started
+
+```python
+# MicroPython blink example
+from machine import Pin, sleep
+led = Pin("LED", Pin.OUT)
+while True:
+    led.toggle()
+    sleep(0.5)

@@ -6,17 +6,5 @@
   "sidebar.mainSidebar.category.Getting Started": {
     "message": "Getting Started",
     "description": "The label for category Getting Started in sidebar mainSidebar"
-  },
-  "sidebar.mainSidebar.category.Projects": {
-    "message": "Projects",
-    "description": "The label for category Projects in sidebar mainSidebar"
-  },
-  "sidebar.mainSidebar.category.Solar": {
-    "message": "Solar",
-    "description": "The label for category Solar in sidebar mainSidebar"
-  },
-  "sidebar.mainSidebar.category.Smart Agriculture": {
-    "message": "Smart Agriculture",
-    "description": "The label for category Smart Agriculture in sidebar mainSidebar"
   }
 }

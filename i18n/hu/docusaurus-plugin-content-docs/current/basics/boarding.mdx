@@ -1,0 +1,74 @@
+---
+slug: /getting-started
+title: Kezdő lépések — Gyors áttekintés
+sidebar_position: 0
+---
+
+import GlossaryTerm from '@site/src/components/glossaryTerm'
+import Checklist from '@site/src/components/Checklist'
+
+# Kezdő lépések — Gyors áttekintés
+
+Üdv! Ez a **gyors beszálló oldal** azoknak, akik a webshopból, közösségiből vagy máshonnan találtak ránk, és **gyorsan el akarnak indulni** egy projekttel.
+
+Ha ide érkeztél: király. Itt **gyorsan beállítasz mindent**, kapsz linket a projekt-doksikhoz, látod **mit érdemes beszerezni**, és **hol kérj segítséget**.
+
+---
+
+## Funkciók
+
+Először érdemes megismerni, **hogyan működik a dokumentáció**. Néhány egyedi funkciót is raktunk a Docusaurusra (ez az oldal is ezekre épül):
+- A leghasznosabb a **<GlossaryTerm term="Tooltips without links" />** és a **<GlossaryTerm term="Tooltips with links" />**. A második általában **gyors ugrás** a doksi egy részére vagy egy webshop-termékre.
+- Van **anyagjegyzék** is (**<GlossaryTerm term="BOM" />** – Bill of Materials), pl. így:
+
+<Checklist 
+project="boarding"
+items={[
+    "Kreativitás",
+    "Tanulási hajlandóság",
+    "Szórakozás",
+]} storageKey="shopping-list" />
+
+---
+
+## Kinek szól?
+- Hobbistáknak, akik a webshopból vesznek alkatrészt/kitet és **vezetett projektet** szeretnének
+- Oktatóknak, akik **oktatási kiteket és projekteket** keresnek
+- Makereknek, akik **gyors, biztonságos prototipizálást** és projektalapot akarnak
+
+---
+
+## 3 lépéses gyors rajt
+
+1. **Olvasd el a biztonsági részt** — mindig nézd át a „Figyelmeztetések” szekciót, mielőtt bármit csinálsz.
+2. **Ellenőrizd a BOM-ot** — hasonlítsd össze a megvett cuccokat a projekt BOM-jával (Solar, Smart-Ag stb.). Szerezz be **hiányzó védelmeket** (biztosíték, védelem PCB, doboz, védőkesztyű, szemüveg) még **bekapcsolás előtt**.
+3. **Indítsd el, biztonságosan** — száraz munkaterületen szereld, tegyél biztosítékot, a **napelemet (PV) legutoljára** csatlakoztasd. Futtasd le az alap **üzembe helyezési teszteket** a Testing doksiban.
+
+---
+
+## Biztonság
+- **Mindig** használj védőfelszerelést, főleg **Li-ion cellák** és más veszélyes elemek mellett. Egy alap készlet:
+  - Védőszemüveg
+  - Védőkesztyű
+  - Jó szellőzés (forrasztásnál különösen)
+- Hagyd magára csak akkor, ha a doksiban lévő **üzembe helyezési ellenőrzőlista** rendben van.
+
+---
+
+## Hol kapsz segítséget?
+- **Discord**: valós idejű segítség a közösségtől — [Discord](https://discord.gg/CecTK8quUc). **Fotók + mérések** sokat gyorsítanak a hibakeresésen.  
+- **Webshop / Alkatrész DB**: nyiss ticketet, ha egy alkatrész hibás/hiányzik.  
+- **GitHub**: jelents hibát a repóban (doksik / firmware).  
+- **Email**: ```zavoczkiattila@mechaxil.com``` .
+
+Segítségkérésnél írd meg/csatold: **SKU-lista**, **bekötés fotói**, **akku feszültség**, **PV Voc**, és a modulok **LED/állapot** jelzései.
+
+## Hozzájárulás & haladó felhasználók
+Javítanál a doksikon, példákon, firmware-en, vagy beszállnál a **project bounty** programba? **Pull request** jöhet GitHubon. Használd a `firmware/` és `docs/` mappákat, és kövesd a repó hozzájárulási jegyzeteit.
+
+---
+
+## Licenc & köszönet
+Ez a projekt és a dokumentáció **nyílt forráskódú**. Hivatkozd a repót, és tartsd be a projekt gyökerében lévő **LICENSE** feltételeit.
+
+---

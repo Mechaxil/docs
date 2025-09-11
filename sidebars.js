@@ -54,7 +54,13 @@ const sidebars = {
       //   },
       // ],
     },
-
+    // {
+    //   type: 'category',
+    //   label: 'Products',
+    //   items: [
+    //     'products/rp2040-pico-w',
+    //   ],
+    // },
   ],
 };
 

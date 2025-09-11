@@ -126,21 +126,17 @@
     "message": "Utolsó frissítés{atDate}{byUser}",
     "description": "The sentence used to display when a page has been last updated, and by who"
   },
-  "theme.NotFound.title": {
-    "message": "Az oldal nem található",
-    "description": "The title of the 404 page"
-  },
   "theme.navbar.mobileVersionsDropdown.label": {
     "message": "Verziók",
     "description": "The label for the navbar versions dropdown on mobile view"
   },
+  "theme.NotFound.title": {
+    "message": "Az oldal nem található",
+    "description": "The title of the 404 page"
+  },
   "theme.tags.tagsListLabel": {
     "message": "Címkék:",
     "description": "The label alongside a tag list"
-  },
-  "theme.AnnouncementBar.closeButtonAriaLabel": {
-    "message": "Bezárás",
-    "description": "The ARIA label for close button of announcement bar"
   },
   "theme.admonition.caution": {
     "message": "figyelem",
@@ -166,6 +162,10 @@
     "message": "vigyázat",
     "description": "The default label used for the Warning admonition (:::warning)"
   },
+  "theme.AnnouncementBar.closeButtonAriaLabel": {
+    "message": "Bezárás",
+    "description": "The ARIA label for close button of announcement bar"
+  },
   "theme.blog.sidebar.navAriaLabel": {
     "message": "Navigáció a blog legutóbbi bejegyzései között",
     "description": "The ARIA label for recent posts in the blog sidebar"
@@ -182,6 +182,10 @@
     "message": "Fő",
     "description": "The ARIA label for the main navigation"
   },
+  "theme.navbar.mobileLanguageDropdown.label": {
+    "message": "Nyelvek",
+    "description": "The label for the mobile language switcher dropdown"
+  },
   "theme.NotFound.p1": {
     "message": "Sajnos nem találtuk azt az oldalt, amit kerestél.",
     "description": "The first paragraph of the 404 page"
@@ -189,10 +193,6 @@
   "theme.NotFound.p2": {
     "message": "Kérjük, lépj kapcsolatba az oldal tulajdonosával, ahonnan erre a hivatkozásra léptél, hogy jelezd, hogy a hivatkozás nem működik.",
     "description": "The 2nd paragraph of the 404 page"
-  },
-  "theme.navbar.mobileLanguageDropdown.label": {
-    "message": "Nyelvek",
-    "description": "The label for the mobile language switcher dropdown"
   },
   "theme.TOCCollapsible.toggleButtonLabel": {
     "message": "Ezen az oldalon",
@@ -206,6 +206,10 @@
     "message": "További információ erről: {title}",
     "description": "The ARIA label for the link to full blog posts from excerpts"
   },
+  "theme.blog.post.readingTime.plurals": {
+    "message": "Egy perc olvasás|{readingTime} perc olvasás",
+    "description": "Pluralized label for \"{readingTime} min read\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
+  },
   "theme.CodeBlock.copy": {
     "message": "Másolás",
     "description": "The copy button label on code blocks"
@@ -217,10 +221,6 @@
   "theme.CodeBlock.copyButtonAriaLabel": {
     "message": "Másolás a vágólapra",
     "description": "The ARIA label for copy code blocks button"
-  },
-  "theme.blog.post.readingTime.plurals": {
-    "message": "Egy perc olvasás|{readingTime} perc olvasás",
-    "description": "Pluralized label for \"{readingTime} min read\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
   },
   "theme.CodeBlock.wordWrapToggle": {
     "message": "Szótörés ki- vagy bekapcsolása",
@@ -254,14 +254,6 @@
     "message": "Navigációs sáv ki- és bekapcsolása",
     "description": "The ARIA label for hamburger menu button of mobile navigation"
   },
-  "theme.docs.sidebar.expandButtonTitle": {
-    "message": "Oldalsáv kibontása",
-    "description": "The ARIA label and title attribute for expand button of doc sidebar"
-  },
-  "theme.docs.sidebar.expandButtonAriaLabel": {
-    "message": "Oldalsáv kibontása",
-    "description": "The ARIA label and title attribute for expand button of doc sidebar"
-  },
   "theme.navbar.mobileDropdown.collapseButton.expandAriaLabel": {
     "message": "Expand the dropdown",
     "description": "The ARIA label of the button to expand the mobile dropdown navbar item"
@@ -269,6 +261,14 @@
   "theme.navbar.mobileDropdown.collapseButton.collapseAriaLabel": {
     "message": "Collapse the dropdown",
     "description": "The ARIA label of the button to collapse the mobile dropdown navbar item"
+  },
+  "theme.docs.sidebar.expandButtonTitle": {
+    "message": "Oldalsáv kibontása",
+    "description": "The ARIA label and title attribute for expand button of doc sidebar"
+  },
+  "theme.docs.sidebar.expandButtonAriaLabel": {
+    "message": "Oldalsáv kibontása",
+    "description": "The ARIA label and title attribute for expand button of doc sidebar"
   },
   "theme.blog.post.plurals": {
     "message": "Egy bejegyzés|{count} bejegyzés",
@@ -321,5 +321,51 @@
   "theme.tags.tagsPageTitle": {
     "message": "Címkék",
     "description": "The title of the tag list page"
+  },
+  "home.h1": {
+    "message": "Mechaxil Dokumentáció"
+  },
+  "home.tagline": {
+    "message": "Dokumentációk a Mechaxil projektekhez és termékekhez"
+  },
+  "home.meta.description": {
+    "message": "Mechaxil - open-source elektronikai dokumentációk és készletek (HU/EN). Raspberry Pi, ESP32, robotika, okos mezőgazdaság."
+  },
+  "home.layout.title": {
+    "message": "Mechaxil Dokumentáció"
+  },
+  "home.og.title": {
+    "message": "Mechaxil Dokumentáció"
+  },
+  "home.twitter.title": {
+    "message": "Mechaxil Dokumentáció"
+  },
+  "features.solar.title": {
+     "message": "Napenergia projekt" 
+  },
+  "features.solar.alt":   {
+     "message": "Napenergia projekt" 
+  },
+  "features.solar.desc":  {
+     "message": "Tanuld meg, hogyan hasznosíthatod a Nap energiáját átfogó útmutatóink és tutorialjaink segítségével." 
+  },
+  "features.weather.title": {
+     "message": "Időjárásállomás projekt" 
+  },
+  "features.weather.alt":   {
+     "message": "Időjárásállomás projekt" 
+  },
+  "features.weather.desc":  {
+     "message": "Kövesd a környezeti viszonyokat a saját időjárásállomásoddal, könnyen követhető projektútmutatóink alapján." 
+  },
+  "features.smartag.title": {
+     "message": "Okos mezőgazdaság projekt" 
+  },
+  "features.smartag.alt":   {
+     "message": "Okos mezőgazdaság projekt" 
+  },
+  "features.smartag.desc":  {
+     "message": "Forradalmasítsd a kertedet okos mezőgazdaság projekttel, lépésről lépésre útmutatóinkkal." 
   }
+
 }

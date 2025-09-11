@@ -59,8 +59,20 @@
     "message": "Webshop",
     "description": "The label of footer link with label=Webshop linking to https://mechaxil.com"
   },
+  "link.item.label.About": {
+    "message": "About",
+    "description": "The label of footer link with label=About linking to /about"
+  },
+  "link.item.label.Contact": {
+    "message": "Contact",
+    "description": "The label of footer link with label=Contact linking to /contact"
+  },
+  "link.item.label.Mechaxil (Brand Page)": {
+    "message": "Mechaxil (Brand Page)",
+    "description": "The label of footer link with label=Mechaxil (Brand Page) linking to /mechaxil"
+  },
   "copyright": {
-    "message": "Copyright © 2025 Mechaxil, Inc. Built with Docusaurus. ",
+    "message": "Copyright © 2025 Mechaxil. Built with Docusaurus.",
     "description": "The footer copyright"
   }
 }
