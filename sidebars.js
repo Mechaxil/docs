@@ -25,40 +25,51 @@ const sidebars = {
       ],
     },
     {
-      // type: 'category',
-      // label: 'Projects',
-      // items: [
-      //   {
-      //     type: 'category',
-      //     label: 'Solar',
-      //     items: [
-      //       'projects/solar/overview',
-      //       'projects/solar/bom',
-      //       'projects/solar/schematics',
-      //       'projects/solar/wiring',
-      //       'projects/solar/testing',
-      //       'projects/solar/firmware',
-      //     ],
-      //   },
-      //   {
-      //     type: 'category',
-      //     label: 'Smart Agriculture',
-      //     items: [
-      //       'projects/smart_agriculture/overview',
-      //       'projects/smart_agriculture/bom',
-      //       'projects/smart_agriculture/schematics',
-      //       'projects/smart_agriculture/calibration',
-      //       'projects/smart_agriculture/deployment',
-      //       'projects/smart_agriculture/firmware',
-      //     ],
-      //   },
-      // ],
+      type: 'category',
+      label: 'Guides',
+      items: [
+        'guides/github-how-to',
+        'guides/thonny-how-to',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Projects',
+      items: [
+        // {
+        //   type: 'category',
+        //   label: 'Solar',
+        //   items: [
+        //     'projects/solar/overview',
+        //     'projects/solar/bom',
+        //     'projects/solar/schematics',
+        //     'projects/solar/wiring',
+        //     'projects/solar/testing',
+        //     'projects/solar/firmware',
+        //   ],
+        // },
+        {
+          type: 'category',
+          label: 'Smart Watering Pot',
+          items: [
+            'projects/auto-watering-pot/auto-watering-pot',
+            'projects/auto-watering-pot/auto-watering-pot-bom',
+            'projects/auto-watering-pot/auto-watering-pot-schematics',
+            'projects/auto-watering-pot/auto-watering-pot-calibration',
+            'projects/auto-watering-pot/auto-watering-pot-firmware',
+            'projects/auto-watering-pot/auto-watering-pot-deployment',
+            'projects/auto-watering-pot/auto-watering-pot-conclusion',
+          ],
+        },
+      ],
     },
     // {
     //   type: 'category',
     //   label: 'Products',
     //   items: [
-    //     'products/rp2040-pico-w',
+    //     //'products/rp2040-pico-w',
+    //     //'products/D4184',
+    //     //'products/template',
     //   ],
     // },
   ],

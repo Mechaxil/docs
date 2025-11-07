@@ -69,7 +69,7 @@ export default function Home() {
 
   const description = translate({
     id: 'home.meta.description',
-    message: 'Mechaxil - open-source electronics docs & kits (HU/EN). Raspberry Pi, ESP32, robotics, smart agriculture.',
+    message: 'Mechaxil - open-source electronics docs & kits (HU/EN). Raspberry Pi, ESP32, robotics, project starters-ideas.',
   });
   return (
     <Layout

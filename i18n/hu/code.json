@@ -341,31 +341,30 @@
     "message": "Mechaxil Dokumentáció"
   },
   "features.solar.title": {
-     "message": "Napenergia projekt" 
+    "message": "Napenergia projekt"
   },
-  "features.solar.alt":   {
-     "message": "Napenergia projekt" 
+  "features.solar.alt": {
+    "message": "Napenergia projekt"
   },
-  "features.solar.desc":  {
-     "message": "Tanuld meg, hogyan hasznosíthatod a Nap energiáját átfogó útmutatóink és tutorialjaink segítségével." 
+  "features.solar.desc": {
+    "message": "Tanuld meg, hogyan hasznosíthatod a Nap energiáját átfogó útmutatóink és tutorialjaink segítségével."
   },
   "features.weather.title": {
-     "message": "Időjárásállomás projekt" 
+    "message": "Időjárásállomás projekt"
   },
-  "features.weather.alt":   {
-     "message": "Időjárásállomás projekt" 
+  "features.weather.alt": {
+    "message": "Időjárásállomás projekt"
   },
-  "features.weather.desc":  {
-     "message": "Kövesd a környezeti viszonyokat a saját időjárásállomásoddal, könnyen követhető projektútmutatóink alapján." 
+  "features.weather.desc": {
+    "message": "Kövesd a környezeti viszonyokat a saját időjárásállomásoddal, könnyen követhető projektútmutatóink alapján."
   },
   "features.smartag.title": {
-     "message": "Okos mezőgazdaság projekt" 
+    "message": "Okos mezőgazdaság projekt"
   },
-  "features.smartag.alt":   {
-     "message": "Okos mezőgazdaság projekt" 
+  "features.smartag.alt": {
+    "message": "Okos mezőgazdaság projekt"
   },
-  "features.smartag.desc":  {
-     "message": "Forradalmasítsd a kertedet okos mezőgazdaság projekttel, lépésről lépésre útmutatóinkkal." 
+  "features.smartag.desc": {
+    "message": "Forradalmasítsd a kertedet okos mezőgazdaság projekttel, lépésről lépésre útmutatóinkkal."
   }
-
 }

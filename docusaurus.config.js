@@ -37,10 +37,7 @@ const config = {
     [
       'classic',
       ({
-        docs: {
-          sidebarPath: './sidebars.js',
-          // editUrl: 'https://github.com/Mechaxil/docs/tree/main/',
-        },
+        docs: { sidebarPath: './sidebars.js' },
         blog: {
           showReadingTime: true,
           feedOptions: { type: ['rss', 'atom'], xslt: true },
@@ -48,14 +45,12 @@ const config = {
           onInlineAuthors: 'warn',
           onUntruncatedBlogPosts: 'warn',
         },
-        theme: { customCss: './src/css/custom.css' },
-
-        sitemap: {
-          changefreq: 'weekly',
-          priority: 0.5,
-          ignorePatterns: ['/tags/**'],
-          filename: 'sitemap.xml',
+        theme: { 
+          customCss: [
+            './src/css/custom.css',
+          ] 
         },
+        sitemap: { changefreq: 'weekly', priority: 0.5, ignorePatterns: ['/tags/**'], filename: 'sitemap.xml' },
       }),
     ],
   ],
@@ -97,8 +92,6 @@ const config = {
             title: 'Docs',
             items: [
               { label: 'Getting Started', to: 'docs/getting-started' },
-              { label: 'Solar Project', to: 'docs/solar/overview' },
-              { label: 'Smart Agriculture Project', to: 'docs/smart-ag/overview' },
             ],
           },
           {

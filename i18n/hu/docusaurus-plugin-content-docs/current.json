@@ -6,5 +6,17 @@
   "sidebar.mainSidebar.category.Getting Started": {
     "message": "Getting Started",
     "description": "The label for category Getting Started in sidebar mainSidebar"
+  },
+  "sidebar.mainSidebar.category.Guides": {
+    "message": "Guides",
+    "description": "The label for category Guides in sidebar mainSidebar"
+  },
+  "sidebar.mainSidebar.category.Projects": {
+    "message": "Projects",
+    "description": "The label for category Projects in sidebar mainSidebar"
+  },
+  "sidebar.mainSidebar.category.Smart Watering Pot": {
+    "message": "Smart Watering Pot",
+    "description": "The label for category Smart Watering Pot in sidebar mainSidebar"
   }
 }

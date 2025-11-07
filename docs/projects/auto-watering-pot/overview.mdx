@@ -1,0 +1,51 @@
+---
+id: auto-watering-pot
+title: Smart Auto-Watering Pot
+sidebar_label: Overview
+slug: /projects/auto-watering-pot
+description: Open-source single-pot watering system using a microcontroller, Capacitive Soil Moisture Sensor, PWM-driven valve, and 3D-printed tank.
+---
+
+import GlossaryTerm from '@site/src/components/GlossaryTerm';
+
+> **Status:** Prototype  
+> **Goal:** Simple, open-source auto-watering system that anyone can build and experiment with.
+
+The **Mechaxil Smart Auto-Watering Pot** is a compact system for keeping a single plant automatically watered.
+
+It uses a <GlossaryTerm term="Capacitive Soil Moisture Sensor" /> connected to a <GlossaryTerm term="Development board of choice" /> running <GlossaryTerm term="MicroPython" />.  
+When the soil gets dry, the controller drives a <GlossaryTerm term="MOSFET Module" /> with a gentle <GlossaryTerm term="PWM" /> soft-start, opening a small <GlossaryTerm term="DC Valve" /> or pump and letting water flow from a 3D-printed tank into the pot.
+
+---
+
+## Kit will be available soon!
+
+## Key features
+
+- <GlossaryTerm term="Development board of choice" /> + <GlossaryTerm term="MicroPython" /> firmware  
+- <GlossaryTerm term="Capacitive Soil Moisture Sensor" />
+- <GlossaryTerm term="PWM" /> soft-start valve control to reduce inrush current and brown-outs  
+- <GlossaryTerm term="RGB LED" /> or a regular <GlossaryTerm term="LED" /> feedback
+- 3D-printable tank and electronics enclosure
+
+---
+
+## Mechanical design
+
+All parts are designed to be printable on a typical <GlossaryTerm term="FDM 3D Printing" /> with a 0.4 mm nozzle.
+
+**Recommended materials:** <GlossaryTerm term="PETG" /> or <GlossaryTerm term="ASA" /> (for better water and heat resistance than <GlossaryTerm term="PLA" />, altough it works just as well).
+
+| Part | Description | Notes |
+|------|-------------|-------|
+| Tank | 200–500 ml reservoir | Watertight print, 2–3 mm walls, ≥4 perimeters, optional epoxy sealing inside |
+| Electronics box | Small enclosure for the controller + <GlossaryTerm term="MOSFET" /> | Cable holes high on the wall, lid screwed or clipped in place |
+
+STL and CAD files will be published together with this documentation once the v0.1 hardware is fully validated.
+
+---
+
+## Project goals
+
+1. Serve as the **first Mechaxil open kit**: small, fully documented, reproducible.  
+2. Teach fundamentals of analog sensing, <GlossaryTerm term="PWM" /> power control and safe power distribution.

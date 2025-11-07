@@ -1,0 +1,56 @@
+---
+id: auto-watering-pot-deployment
+title: Deployment & Maintenance
+sidebar_label: Deployment
+slug: /projects/auto-watering-pot/deployment
+---
+
+import GlossaryTerm from '@site/src/components/GlossaryTerm';
+
+This page covers the practical steps to install, test and maintain the smart auto-watering pot in real use.
+
+---
+
+## Pre-deployment checklist
+
+Before putting the system on a live plant, confirm:
+
+- The moisture sensor is wired correctly and returns sensible <GlossaryTerm term="ADC" /> values.  
+- The valve or pump turns on and off as expected under firmware control.  
+- All grounds are connected together.  
+- The tank and hose routing have been leak-tested.  
+- You have set `DRY_THRESHOLD` and `WET_THRESHOLD` according to your soil.
+
+---
+
+## Installation steps
+
+1. **Place the tank** on the pot, or on a stable surface next to it.  
+2. **Insert the moisture sensor** into the soil, near the root zone, at a consistent depth. Avoid pushing it against the pot wall.  
+3. **Mount the Electronics (Enclosure)** far from the tank so a leak cannot reach it.  
+4. **Plug in the <GlossaryTerm term="USB Wall Power Supply" />** (5 V, ≥ 2 A) to power the <GlossaryTerm term="MT3608" />.  
+5. Watch the system through the first watering cycles and check that:
+   - The <GlossaryTerm term="LED" /> colors or state match the expected states.  
+   - The soil is not being over-watered.  
+   - There are no leaks or drips from fittings or printed parts.
+
+---
+
+## Maintenance
+
+Regular maintenance keeps the system reliable:
+
+| Frequency | Action |
+|----------:|--------|
+| Weekly    | Check tank water level and top up as needed. |
+| Monthly   | Visually inspect printed parts for cracks, hose connections for looseness, and the valve/pump for unusual noise. |
+| 3-6 months| Re-run the calibration procedure if soil composition or potting mix changes, or if behaviour drifts. |
+
+---
+
+## Behaviour and fail-safes
+
+- On power loss, the valve or pump is off by default.  
+- The firmware limits each watering event to a short duration (`WATER_TIME_SEC`) to reduce the chance of flooding.  
+- If you notice the system watering too often or not enough, adjust thresholds and intervals rather than trying to compensate by changing tank size.
+

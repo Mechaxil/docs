@@ -1,0 +1,83 @@
+---
+id: thonny-how-to
+title: Programming Microcontrollers with Thonny
+sidebar_label: Using Thonny
+slug: /guides/thonny
+---
+
+**Thonny** is a lightweight Python IDE that makes it very easy to program boards like the **ESP32** and **Raspberry Pi Pico** using **MicroPython**.
+
+This guide explains how to install Thonny, flash MicroPython firmware, and upload the `main.py` script for the Smart Auto-Watering Pot.
+
+---
+
+## 1. Install Thonny
+
+1. Download Thonny from [https://thonny.org](https://thonny.org)  
+2. Run the installer and follow the prompts  
+3. Launch Thonny once installed
+
+![Installing Thonny](/img/guides/thonny-install.png)
+
+---
+
+## 2. Connect Your Board
+
+1. Plug your Board into your computer using a USB cable  
+2. If prompted, allow Windows/macOS to install any drivers  
+3. You should see a new COM or serial port appear
+
+---
+
+## 3. Flash MicroPython Firmware
+
+You only need to do this **once per board**.
+
+1. In Thonny, go to: **Tools → Options → Interpreter**  
+2. Select your board type from the list (e.g. “ESP32” or “Raspberry Pi Pico”)  
+3. Click **Install or Update MicroPython**  
+4. Wait for the process to complete
+
+![Installing MicroPython firmware in Thonny](/img/guides/thonny-flash.png)
+
+---
+
+## 4. Verify the REPL Connection
+
+At the bottom of Thonny, you'll see the **MicroPython REPL** (interactive prompt).  
+Try typing:
+
+```python
+print("Hello from MicroPython!")
+```
+
+If it prints successfully, your board is ready.
+
+---
+
+## 5. Upload the Firmware
+
+1. Open the `main.py` file from the `firmware/` folder of this project  
+2. Click **Run → Save As...** and choose **MicroPython device**  
+3. Name the file `main.py` — this makes it run automatically on boot  
+4. Click **Save**
+
+
+---
+
+## 6. Watch It Run
+
+After saving, the code should start immediately.  
+You can monitor the serial output from the Thonny shell — it will print live moisture readings and watering events.
+
+---
+
+## 7. Next Steps
+
+- [Calibrate the sensor](/projects/auto-watering-pot/calibration)
+- [Deploy the system](/projects/auto-watering-pot/deployment)
+- [Contribute improvements](/projects/auto-watering-pot/conclusion)
+
+Once everything is running, your plant will take care of itself — and you can start experimenting with custom features!
+
+---

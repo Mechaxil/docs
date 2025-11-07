@@ -1,0 +1,71 @@
+---
+id: auto-watering-pot-schematics
+title: Wiring & Schematics
+sidebar_label: Schematics
+slug: /projects/auto-watering-pot/schematics
+---
+
+import GlossaryTerm from '@site/src/components/GlossaryTerm';
+import CirkitEmbed from '@site/src/components/CirkitEmbed.js';
+
+
+## System diagram
+
+<CirkitEmbed id="1194c3aa-529a-4631-9cc5-7e30b15f22fa" />
+
+The controller is a development board with:
+
+- one <GlossaryTerm term="ADC" /> input for the <GlossaryTerm term="Capacitive Soil Moisture Sensor" />,  
+- one <GlossaryTerm term="PWM" /> output for the <GlossaryTerm term="MOSFET" /> gate,  
+- one <GlossaryTerm term="LED" /> used as a status indicator.
+
+---
+
+## Pinout
+
+| Function | ESP32-C3 Pin | Notes |
+|----------|--------------|-------|
+| Soil sensor analog OUT | GPIO0 (<GlossaryTerm term="ADC" />) | Higher reading = drier soil |
+| Valve PWM (MOSFET gate) | GPIO6 | Logic-level <GlossaryTerm term="PWM" /> (3.3 V) |
+| RGB LED data | GPIO10 | On-board <GlossaryTerm term="WS2812" /> (<GlossaryTerm term="NeoPixel" /> / GRB order) |
+| 5 V input | USB VBUS | Wall USB power supply only |
+| Ground | <GlossaryTerm term="GND" /> | Common reference for sensor, valve and controller |
+
+---
+
+## Typical wiring
+
+### Soil moisture sensor
+
+- **VCC** → 3.3 V or 5 V (according to sensor rating)  
+- **GND** → GND  
+- **OUT** → GPIO0 (ADC)
+
+The firmware assumes **higher ADC value = drier soil** for this sensor type.
+
+### Valve / pump via MOSFET
+
+- Valve or pump **positive** → 5–12 V supply (directly or from a DC-DC step-up module)  
+- Valve or pump **negative** → MOSFET drain  
+- MOSFET source → GND  
+- MOSFET gate → GPIO6 (optional 100–220 Ω series resistor in the gate line)
+
+If the load is inductive (pump, solenoid valve), add a <GlossaryTerm term="Flyback Diode" /> (e.g. 1N5819) across the load, with the diode’s band towards the positive side.
+
+### Power topology
+
+- The <GlossaryTerm term="ESP32" />-C3 is powered from a **5 V USB wall charger**.  
+- If a separate higher-voltage supply is used for the valve (e.g. a 12 V brick or step-up), **all grounds must be tied together**.
+
+---
+
+## Safety notes
+
+> ⚠️ **Use only a wall USB power supply**  
+> Do *not* power this project from a PC, laptop, TV, or monitor USB port. The valve or pump can draw more current than those ports are designed for.
+
+> 💧 **Keep electronics above water**  
+> The tank and plumbing can eventually leak. Place the electronics box higher than the maximum water level and route cables with drip loops where practical.
+
+> ⚡ **Protective components**  
+> Always use a flyback diode on inductive loads and consider adding a fuse on the valve/pump supply line for extra safety.
