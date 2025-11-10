@@ -10,7 +10,7 @@
 
 
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;700&display=swap"><link rel="stylesheet" href="/hu/assets/css/styles.62a9bc61.css">
-<script src="/hu/assets/js/runtime~main.3b03686a.js" defer="defer"></script>
+<script src="/hu/assets/js/runtime~main.eefc14cd.js" defer="defer"></script>
 <script src="/hu/assets/js/main.3a5b451e.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -32,6 +32,9 @@
 <li>OUT → ADC input (refer to the GPIO pinout for the board you are using)</li>
 </ul>
 <p>Make sure the firmware is <em>not</em> running yet so you can use the <span class="tooltip_hquk"><span class="glossary-term">REPL</span><span class="tooltiptext_cyES"><div><b>Read-Eval-Print Loop</b> — an interactive programming environment that takes user inputs, executes them, and returns the results. Common in MicroPython for testing code snippets.</div></span></span> for manual testing.</p>
+<blockquote>
+<p>⚠️ Before plugging in the Development board make sure the valve is disconnected, since accidental current surge may damage your computer!</p>
+</blockquote>
 <hr>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="2-run-a-simple-adc-test-script">2. Run a simple ADC test script<a href="#2-run-a-simple-adc-test-script" class="hash-link" aria-label="Közvetlen hivatkozás erre: 2. Run a simple ADC test script" title="Közvetlen hivatkozás erre: 2. Run a simple ADC test script">​</a></h2>
 <p>Use this short script in the <span class="tooltip_hquk"><span class="glossary-term">MicroPython</span><span class="tooltiptext_cyES"><div>A compact version of Python designed for microcontrollers like the ESP32 and Raspberry Pi Pico. Allows scripting directly on embedded hardware.</div></span></span> <span class="tooltip_hquk"><span class="glossary-term">REPL</span><span class="tooltiptext_cyES"><div><b>Read-Eval-Print Loop</b> — an interactive programming environment that takes user inputs, executes them, and returns the results. Common in MicroPython for testing code snippets.</div></span></span> to print the raw <span class="tooltip_hquk"><span class="glossary-term">ADC</span><span class="tooltiptext_cyES"><div><b>Analog-to-Digital Converter</b> — converts analog voltages (like sensor outputs) into digital values that microcontrollers can read.</div></span></span> value once per second:</p>
