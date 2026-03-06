@@ -4,8 +4,7 @@ title: Wiring & Installation
 sidebar_position: 4
 ---
 
-<!-- docs/solar/wiring.md -->
-
+import GlossaryTerm from '@site/src/components/GlossaryTerm';
 
 # Wiring & Installation
 
@@ -24,8 +23,8 @@ PV+ -> inline fuse -> Waveshare PV+
 PV- -> Waveshare PV-
 Battery+ -> Waveshare BAT+
 Battery- -> Waveshare BAT-
-Waveshare 5V/3.3V out -> Buck (if needed) -> Pico/ESP32 power
-Battery + -> MOSFET V+ ; MOSFET drain -> Solenoid + ; Solenoid - -> MOSFET source -> Battery - (common ground)
+Waveshare 5V/3.3V out -> Buck (if needed) -> Pico/<GlossaryTerm term="ESP32" /> power
+Battery + -> <GlossaryTerm term="MOSFET" /> V+ ; <GlossaryTerm term="MOSFET" /> drain -> Solenoid + ; Solenoid - -> <GlossaryTerm term="MOSFET" /> source -> Battery - (common ground)
 ```
 
 ## Wire sizing & connectors

@@ -6,7 +6,6 @@ sidebar_position: 1
 
 import GlossaryTerm from '@site/src/components/glossaryTerm'
 
-<!-- docs/solar/overview.mdx -->
 
 # Solar Power Project — Overview
 
@@ -20,19 +19,19 @@ import GlossaryTerm from '@site/src/components/glossaryTerm'
 />
 
 Small off-grid solar charger using any 6-24 V panel array (up to 3.5A total), 
-the **<GlossaryTerm term="Waveshare Solar Power Manager" />** (handles Li-ion charging, protections and indicators), 
-and a single **18650 Cell** (or small protected pack). Local controller: **<GlossaryTerm term="Raspberry Pi Pico" />**, 
+the **<GlossaryTerm term="Waveshare Solar Power Manager" />** (handles <GlossaryTerm term="Li-ion Charging" />, protections and indicators), 
+and a single **<GlossaryTerm term="18650 Cell" />** (or small protected pack). Local controller: **<GlossaryTerm term="Raspberry Pi Pico" />**, 
 **<GlossaryTerm term="ESP32" />** or any other microcontroller.
 
 **Goals**
 
-- Safe **Li-ion Charging**
+- Safe **<GlossaryTerm term="Li-ion Charging" />**
 - Reliable outdoor deployment (IP-rated enclosure, fuses, proper wiring)
 - Simple power for controllers and actuators (5 V / 3.3 V rails)
 
 **Warnings**
 
-- Li-ion cells can catch fire if abused. Use protected cells or a protection PCB and fuses.
+- Li-ion cells can catch fire if abused. Use protected cells or a protection <GlossaryTerm term="PCB" /> and fuses.
 - Ensure PV open-circuit voltage (Voc) ≤ 24 V for the Waveshare board.
 
-Quick links: [BOM](./bom) • [Schematics](./schematics) • [Wiring](./wiring) • [Testing](./testing) • [Firmware](./firmware)
+Quick links: [<GlossaryTerm term="BOM" />](./<GlossaryTerm term="BOM" />) • [Schematics](./schematics) • [Wiring](./wiring) • [Testing](./testing) • [Firmware](./firmware)

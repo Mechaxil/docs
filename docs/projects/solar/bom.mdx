@@ -6,10 +6,9 @@ sidebar_position: 2
 
 import { useState } from 'react';
 import Checklist from '@site/src/components/Checklist'
+import GlossaryTerm from '@site/src/components/GlossaryTerm';
 
-<!-- docs/solar/bom.mdx -->
-
-# Solar BOM
+# Solar <GlossaryTerm term="BOM" />
 
 <Checklist 
 project="solar"
@@ -17,7 +16,7 @@ items={[
     "Development board of choice",
     "12 V 10 W solar panel",
     "18650 Cell",
-    "1×18650 holder w/ wires",
+    "1x18650 holder w/ wires",
     "Waveshare Solar Power Manager",
     "Enclosure",
     "Cables",
@@ -27,4 +26,4 @@ items={[
 ]} storageKey="shopping-list" />
 
 
-**Notes**: Waveshare limits charging current. Don’t parallel raw cells without a proper battery management/pack. Add fuses on both PV and battery if deploying.
+**Notes**: Waveshare limits charging current. Don't parallel raw cells without a proper battery management/pack. Add fuses on both PV and battery if deploying.

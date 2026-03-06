@@ -52,26 +52,26 @@ const sidebars = {
           type: 'category',
           label: 'Smart Watering Pot',
           items: [
-            'projects/auto-watering-pot/auto-watering-pot',
-            'projects/auto-watering-pot/auto-watering-pot-bom',
-            'projects/auto-watering-pot/auto-watering-pot-schematics',
-            'projects/auto-watering-pot/auto-watering-pot-calibration',
-            'projects/auto-watering-pot/auto-watering-pot-firmware',
-            'projects/auto-watering-pot/auto-watering-pot-deployment',
-            'projects/auto-watering-pot/auto-watering-pot-conclusion',
+            'projects/smart-auto-watering-pot/docs/auto-watering-pot',
+            'projects/smart-auto-watering-pot/docs/auto-watering-pot-bom',
+            'projects/smart-auto-watering-pot/docs/auto-watering-pot-schematics',
+            'projects/smart-auto-watering-pot/docs/auto-watering-pot-calibration',
+            'projects/smart-auto-watering-pot/docs/auto-watering-pot-firmware',
+            'projects/smart-auto-watering-pot/docs/auto-watering-pot-deployment',
+            'projects/smart-auto-watering-pot/docs/auto-watering-pot-conclusion',
           ],
         },
       ],
     },
-    // {
-    //   type: 'category',
-    //   label: 'Products',
-    //   items: [
-    //     //'products/rp2040-pico-w',
-    //     //'products/D4184',
-    //     //'products/template',
-    //   ],
-    // },
+    {
+      type: 'category',
+      label: 'Products',
+      items: [
+        'products/rp2040-pico-w',
+        'products/D4184',
+        //'products/template',
+      ],
+    },
   ],
 };
 
