@@ -45,3 +45,14 @@ html {
   align-items: center;
   gap: 8px;
 }
+
+.btn {
+  display: inline-block;
+  padding: 8px 16px;
+  background: #FF914D;
+  color: #0D0D0D;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
