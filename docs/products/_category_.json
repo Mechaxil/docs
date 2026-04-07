@@ -1,0 +1,9 @@
+{
+  "label": "Products",
+  "position": 4,
+  "link": {
+    "type": "generated-index",
+    "title": "Products",
+    "description": "Hardware reference pages for supported boards, modules, and kits."
+  }
+}

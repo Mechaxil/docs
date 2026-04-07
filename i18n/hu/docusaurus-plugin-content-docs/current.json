@@ -18,5 +18,9 @@
   "sidebar.mainSidebar.category.Smart Watering Pot": {
     "message": "Smart Watering Pot",
     "description": "The label for category Smart Watering Pot in sidebar mainSidebar"
+  },
+  "sidebar.mainSidebar.category.Products": {
+    "message": "Products",
+    "description": "The label for category Products in sidebar mainSidebar"
   }
 }
