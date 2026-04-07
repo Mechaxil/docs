@@ -92,52 +92,77 @@ function WhatIsMechaxil() {
 /* ---------------- DOCS GRID ---------------- */
 
 function DocsGrid() {
+  const docs = [
+    {
+      title: "Getting Started",
+      desc: "Tools, setup, first circuit",
+      img: "/img/SVG/getting-started.svg",
+      to: "/docs/getting-started",
+      disabled: false,
+    },
+    {
+      title: "Fundamentals",
+      desc: "Voltage, current, components",
+      img: "/img/SVG/fundamentals.svg",
+      to: "/docs/fundamentals",
+      disabled: true,
+    },
+    {
+      title: "Microcontrollers",
+      desc: "Arduino, ESP, embedded basics",
+      img: "/img/SVG/microcontrollers.svg",
+      to: "/docs/microcontrollers",
+      disabled: true,
+    },
+    {
+      title: "Communication",
+      desc: "I2C, SPI, UART",
+      img: "/img/SVG/communication.svg",
+      to: "/docs/communication",
+      disabled: true,
+    },
+    {
+      title: "Projects",
+      desc: "Real-world builds",
+      img: "/img/SVG/projects.svg",
+      to: "/docs/projects",
+      disabled: false,
+    },
+    {
+      title: "Troubleshooting",
+      desc: "Debugging & fixes",
+      img: "/img/SVG/troubleshooting.svg",
+      to: "/docs/troubleshooting",
+      disabled: true,
+    },
+  ];
+
   return (
     <section className={styles.section}>
       <div className="container">
-
         <Heading as="h2">Explore Documentation</Heading>
 
         <div className={styles.grid}>
+          {docs.map((doc, i) => {
+            const Wrapper = doc.disabled ? "div" : Link;
 
-          <Link to="/docs/getting-started" className={styles.card}>
-            <img src="/img/SVG/getting-started.svg" />
-            <h3>Getting Started</h3>
-            <p>Tools, setup, first circuit</p>
-          </Link>
+            return (
+              <Wrapper
+                key={i}
+                to={!doc.disabled ? doc.to : undefined}
+                className={clsx(styles.card, doc.disabled && styles.cardDisabled)}
+              >
+                <img src={doc.img} />
+                <h3>{doc.title}</h3>
+                <p>{doc.desc}</p>
 
-          <Link to="/docs/fundamentals" className={styles.card}>
-            <img src="/img/SVG/fundamentals.svg" />
-            <h3>Fundamentals</h3>
-            <p>Voltage, current, components</p>
-          </Link>
-
-          <Link to="/docs/microcontrollers" className={styles.card}>
-            <img src="/img/SVG/microcontrollers.svg" />
-            <h3>Microcontrollers</h3>
-            <p>Arduino, ESP, embedded basics</p>
-          </Link>
-
-          <Link to="/docs/communication" className={styles.card}>
-            <img src="/img/SVG/communication.svg" />
-            <h3>Communication</h3>
-            <p>I2C, SPI, UART</p>
-          </Link>
-
-          <Link to="/docs/projects" className={styles.card}>
-            <img src="/img/SVG/projects.svg" />
-            <h3>Projects</h3>
-            <p>Real-world builds</p>
-          </Link>
-
-          <Link to="/docs/troubleshooting" className={styles.card}>
-            <img src="/img/SVG/troubleshooting.svg" />
-            <h3>Troubleshooting</h3>
-            <p>Debugging & fixes</p>
-          </Link>
-
+                {doc.disabled && (
+                  <span className={styles.comingSoon}>Coming soon</span>
+                )}
+              </Wrapper>
+            );
+          })}
         </div>
-
       </div>
     </section>
   );
