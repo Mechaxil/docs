@@ -1,3 +1,4 @@
 [submodule "docs/projects/smart-auto-watering-pot"]
 	path = docs/projects/smart-auto-watering-pot
 	url = https://github.com/Mechaxil/smart-auto-watering-pot.git
+	branch = main
