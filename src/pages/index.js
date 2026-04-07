@@ -33,11 +33,11 @@ function HomepageHeader() {
                 Get Started
               </Link>
 
-              <Link className="button button--secondary button--lg" to="/docs">
-                Browse Docs
+              <Link className="button button--secondary button--lg" to="/docs/projects">
+                Browse Projects
               </Link>
 
-              <Link className="button button--outline button--lg" to="/shop">
+              <Link className="button button--outline button--lg" to="https://mechaxil.com/collections/corex-kits">
                 View Kits
               </Link>
             </div>

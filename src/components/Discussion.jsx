@@ -1,7 +1,9 @@
 import React, { useEffect, useRef } from "react";
+import {useColorMode} from '@docusaurus/theme-common';
 
 export default function Discussion() {
   const containerRef = useRef(null);
+  const {colorMode} = useColorMode();
 
   useEffect(() => {
     const container = containerRef.current;
@@ -26,7 +28,7 @@ export default function Discussion() {
     script.setAttribute("data-reactions-enabled", "1");
     script.setAttribute("data-emit-metadata", "0");
     script.setAttribute("data-input-position", "bottom");
-    script.setAttribute("data-theme", "dark_dimmed");
+    script.setAttribute("data-theme", colorMode === 'dark' ? "dark_dimmed" : "light");
     script.setAttribute("data-lang", "en");
     script.setAttribute("data-loading", "lazy");
 
@@ -37,7 +39,7 @@ export default function Discussion() {
         container.removeChild(container.firstChild);
       }
     };
-  }, []);
+  }, [colorMode]);
 
   return (
     <div
@@ -45,7 +47,7 @@ export default function Discussion() {
       style={{
         marginTop: "2rem",
         paddingTop: "1rem",
-        borderTop: "1px solid #333",
+        borderTop: "1px solid var(--mx-border)",
       }}
     />
   );

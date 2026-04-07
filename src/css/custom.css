@@ -1,43 +1,204 @@
-/**
- * Any CSS included here will be global. The classic template
- * bundles Infima by default. Infima is a CSS framework designed to
- * work well for content-centric websites.
- */
-
-/* You can override the default Infima variables here. */
 html {
   font-family: 'Lexend', sans-serif;
 }
 
 :root {
-  --ifm-color-primary: #FF914D;
-  --ifm-color-primary-dark: #FF914D;
-  --ifm-color-primary-darker: #FF914D;
-  --ifm-color-primary-darkest: #FF914D;
-  --ifm-color-primary-light: #FF914D;
-  --ifm-color-primary-lighter: #FF914D;
-  --ifm-color-primary-lightest: #FF914D;
+  color-scheme: light;
+
+  /* Core Mechaxil brand tokens */
+  --mx-black: #0d0d0d;
+  --mx-charcoal: #1e1e1e;
+  --mx-slate: #3a3a3a;
+  --mx-muted: #b3b3b3;
+  --mx-brand-strong: #ff6a00;
+  --mx-brand: #ff914d;
+  --mx-brand-rgb: 255, 145, 77;
+  --mx-brand-strong-rgb: 255, 106, 0;
+
+  /* Light theme surfaces */
+  --mx-bg-page: #f6f6f6;
+  --mx-bg-surface: #ffffff;
+  --mx-bg-surface-alt: #ededed;
+  --mx-bg-elevated: #ffffff;
+  --mx-text-primary: var(--mx-black);
+  --mx-text-secondary: var(--mx-slate);
+  --mx-text-inverse: #ffffff;
+  --mx-border: rgba(30, 30, 30, 0.12);
+  --mx-shadow: 0 12px 28px rgba(13, 13, 13, 0.08);
+  --mx-pattern-opacity: 0.028;
+
+  /* Docusaurus mapping */
+  --ifm-color-primary: var(--mx-brand);
+  --ifm-color-primary-dark: #f07d2c;
+  --ifm-color-primary-darker: #ea761f;
+  --ifm-color-primary-darkest: #cf5d00;
+  --ifm-color-primary-light: #ffa566;
+  --ifm-color-primary-lighter: #ffb27d;
+  --ifm-color-primary-lightest: #ffc59f;
+  --ifm-background-color: var(--mx-bg-page);
+  --ifm-background-surface-color: var(--mx-bg-surface);
+  --ifm-navbar-background-color: rgba(255, 255, 255, 0.92);
+  --ifm-footer-background-color: var(--mx-black);
+  --ifm-footer-color: var(--mx-muted);
+  --ifm-footer-link-color: var(--mx-muted);
+  --ifm-footer-link-hover-color: var(--mx-brand);
+  --ifm-footer-title-color: var(--mx-text-inverse);
+  --ifm-font-color-base: var(--mx-text-primary);
+  --ifm-font-color-secondary: var(--mx-text-secondary);
+  --ifm-heading-color: var(--mx-text-primary);
+  --ifm-link-color: var(--mx-brand-strong);
+  --ifm-menu-color: var(--mx-slate);
+  --ifm-menu-color-active: var(--mx-brand-strong);
+  --ifm-menu-color-background-active: rgba(var(--mx-brand-rgb), 0.12);
   --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --ifm-code-background: rgba(var(--mx-brand-rgb), 0.1);
+  --ifm-pre-background: var(--mx-charcoal);
+  --ifm-hover-overlay: rgba(var(--mx-brand-rgb), 0.08);
+  --ifm-toc-border-color: var(--mx-border);
+  --ifm-hr-border-color: var(--mx-border);
+  --ifm-global-shadow-lw: var(--mx-shadow);
+  --ifm-global-shadow-md: 0 20px 48px rgba(13, 13, 13, 0.12);
+  --ifm-global-radius: 14px;
+  --docusaurus-highlighted-code-line-bg: rgba(var(--mx-brand-rgb), 0.14);
 }
 
-/* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
-  --ifm-color-primary: #FF914D;
-  --ifm-color-primary-dark: #FF914D;
-  --ifm-color-primary-darker: #FF914D;
-  --ifm-color-primary-darkest: #FF914D;
-  --ifm-color-primary-light: #FF914D;
-  --ifm-color-primary-lighter: #FF914D;
-  --ifm-color-primary-lightest: #FF914D;
-  --docusaurus-highlighted-code-line-bg: #0D0D0D;
+  color-scheme: dark;
+
+  --mx-bg-page: var(--mx-charcoal);
+  --mx-bg-surface: var(--mx-charcoal);
+  --mx-bg-surface-alt: #262626;
+  --mx-bg-elevated: var(--mx-slate);
+  --mx-text-primary: #ffffff;
+  --mx-text-secondary: var(--mx-muted);
+  --mx-text-inverse: var(--mx-black);
+  --mx-border: rgba(179, 179, 179, 0.14);
+  --mx-shadow: 0 14px 32px rgba(0, 0, 0, 0.28);
+  --mx-pattern-opacity: 0.05;
+
+  --ifm-color-primary: var(--mx-brand);
+  --ifm-color-primary-dark: #ff7c1f;
+  --ifm-color-primary-darker: #ff7210;
+  --ifm-color-primary-darkest: var(--mx-brand-strong);
+  --ifm-color-primary-light: #ffa566;
+  --ifm-color-primary-lighter: #ffb27d;
+  --ifm-color-primary-lightest: #ffc59f;
+  --ifm-background-color: var(--mx-bg-page);
+  --ifm-background-surface-color: var(--mx-bg-surface);
+  --ifm-navbar-background-color: rgba(13, 13, 13, 0.88);
+  --ifm-footer-background-color: var(--mx-black);
+  --ifm-footer-color: var(--mx-muted);
+  --ifm-footer-link-color: var(--mx-muted);
+  --ifm-footer-link-hover-color: var(--mx-brand);
+  --ifm-footer-title-color: #ffffff;
+  --ifm-font-color-base: var(--mx-text-primary);
+  --ifm-font-color-secondary: var(--mx-text-secondary);
+  --ifm-heading-color: var(--mx-text-primary);
+  --ifm-link-color: var(--mx-brand);
+  --ifm-menu-color: var(--mx-text-secondary);
+  --ifm-menu-color-active: var(--mx-brand);
+  --ifm-menu-color-background-active: rgba(var(--mx-brand-rgb), 0.16);
+  --ifm-code-background: rgba(255, 255, 255, 0.06);
+  --ifm-pre-background: var(--mx-charcoal);
+  --ifm-hover-overlay: rgba(var(--mx-brand-rgb), 0.12);
+  --docusaurus-highlighted-code-line-bg: rgba(var(--mx-brand-rgb), 0.2);
 }
 
-/* Bigger, nicer checkbox; uses browser-native accent color */
+html,
+body {
+  background: var(--mx-bg-page);
+  color: var(--mx-text-primary);
+}
+
+body {
+  background-image:
+    radial-gradient(circle at top left, rgba(var(--mx-brand-rgb), 0.08), transparent 28%),
+    radial-gradient(circle at bottom right, rgba(var(--mx-brand-strong-rgb), 0.08), transparent 24%);
+}
+
+.navbar,
+.footer,
+.theme-doc-sidebar-container,
+.pagination-nav__link,
+.card {
+  border-color: var(--mx-border);
+}
+
+.navbar {
+  backdrop-filter: blur(14px);
+  box-shadow: 0 1px 0 var(--mx-border);
+}
+
+.footer,
+.footer--dark {
+  --ifm-footer-background-color: var(--mx-black);
+  --ifm-footer-color: var(--mx-muted);
+  --ifm-footer-link-color: var(--mx-muted);
+  --ifm-footer-link-hover-color: var(--mx-brand);
+  --ifm-footer-title-color: #ffffff;
+  background: var(--mx-black);
+  color: var(--mx-muted);
+  border-top: 1px solid rgba(255, 145, 77, 0.12);
+}
+
+.footer__title {
+  color: var(--ifm-footer-title-color);
+}
+
+.footer__link-item,
+.footer__copyright {
+  color: var(--ifm-footer-color);
+}
+
+.footer__link-item:hover {
+  color: var(--ifm-footer-link-hover-color);
+}
+
+.theme-doc-sidebar-container {
+  background: color-mix(in srgb, var(--mx-bg-surface) 88%, transparent);
+}
+
+.menu__link:hover,
+.table-of-contents__link:hover,
+.pagination-nav__link:hover {
+  color: var(--ifm-menu-color-active);
+}
+
+.pagination-nav__link,
+.theme-admonition,
+table {
+  background: var(--mx-bg-surface);
+}
+
+.button.button--primary {
+  background: linear-gradient(135deg, var(--mx-brand), var(--mx-brand-strong));
+  border: none;
+  color: var(--mx-text-inverse);
+}
+
+.button.button--primary:hover {
+  color: var(--mx-text-inverse);
+  filter: brightness(1.03);
+}
+
+.button.button--secondary,
+.button.button--outline {
+  background: transparent;
+  border-color: var(--mx-border);
+  color: var(--mx-text-primary);
+}
+
+.button.button--secondary:hover,
+.button.button--outline:hover {
+  border-color: var(--mx-brand);
+  background: rgba(var(--mx-brand-rgb), 0.08);
+  color: var(--mx-text-primary);
+}
+
 .checklist-checkbox {
   width: 30px;
   height: 30px;
-  accent-color: var(--ifm-color-primary); /* Docusaurus theme color */
+  accent-color: var(--ifm-color-primary);
 }
 
 .checklist label {
@@ -49,10 +210,17 @@ html {
 .btn {
   display: inline-block;
   padding: 8px 16px;
-  background: #FF914D;
-  color: #0D0D0D;
-  border-radius: 4px;
+  background: linear-gradient(135deg, var(--mx-brand), var(--mx-brand-strong));
+  color: var(--mx-text-inverse);
+  border-radius: 999px;
   text-decoration: none;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
+  font-weight: 700;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+}
+
+.btn:hover {
+  color: var(--mx-text-inverse);
+  text-decoration: none;
+  transform: translateY(-1px);
+  filter: brightness(1.03);
 }
