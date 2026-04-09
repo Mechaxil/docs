@@ -1,0 +1,8 @@
+﻿{
+  "label": "Solar",
+  "position": 2,
+  "link": {
+    "type": "doc",
+    "id": "projects/solar/overview"
+  }
+}

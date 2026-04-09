@@ -1,0 +1,9 @@
+﻿{
+  "label": "Projektek",
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+    "title": "Projektek",
+    "description": "Projektépítési útmutatók, megvalósítási jegyzetek és fejlesztés alatt álló munkák."
+  }
+}

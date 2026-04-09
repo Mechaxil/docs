@@ -1,0 +1,55 @@
+﻿---
+id: auto-watering-pot-deployment
+title: Telepítés és karbantartás
+sidebar_label: Telepítés
+slug: /projects/auto-watering-pot/deployment
+---
+
+import GlossaryTerm from '@site/src/components/GlossaryTerm';
+
+Ez az oldal az automata öntözőcserép valós használatban történő telepítésének, tesztelésének és karbantartásának gyakorlati lépéseit foglalja össze.
+
+---
+
+## Telepítés előtti ellenőrzőlista
+
+Mielőtt a rendszert élesben egy növényre tennéd, ellenőrizd:
+
+- a nedvességszenzor helyesen van bekötve, és életszerű <GlossaryTerm term="ADC" /> értékeket ad vissza
+- a szelep vagy szivattyú a firmware vezérlése alatt megfelelően be- és kikapcsol
+- minden föld össze van kötve
+- a tartályt és a csövezést szivárgás szempontjából letesztelted
+- a `DRY_THRESHOLD` és `WET_THRESHOLD` értékeket a saját földedhez állítottad be
+
+---
+
+## Telepítési lépések
+
+1. **Helyezd el a tartályt** a cserépen vagy egy stabil felületen mellette.
+2. **Szúrd a nedvességszenzort** a talajba, a gyökérzóna közelébe, egyenletes mélységben. Ne nyomd a cserép falához.
+3. **Szereld fel az elektronikát tartalmazó házat** a tartálytól távol, hogy egy esetleges szivárgás ne érhesse el.
+4. **Csatlakoztasd a <GlossaryTerm term="USB Wall Power Supply" />-t** (5 V, ≥ 2 A), amely a <GlossaryTerm term="MT3608" /> modult táplálja.
+5. Figyeld meg a rendszert az első öntözési ciklusok alatt, és ellenőrizd, hogy:
+   - a <GlossaryTerm term="LED" /> színei vagy állapotai megfelelnek a vártnak
+   - a föld nem kap túl sok vizet
+   - a csatlakozóknál és a nyomtatott alkatrészeknél nincs szivárgás vagy csepegés
+
+---
+
+## Karbantartás
+
+A rendszeres karbantartás megbízhatóbb működést ad:
+
+| Gyakoriság | Teendő |
+|-----------:|--------|
+| Hetente | Ellenőrizd a tartály vízszintjét, és szükség esetén töltsd fel. |
+| Havonta | Nézd át a nyomtatott alkatrészeket repedésekre, a csatlakozásokat kilazulásra, a szelepet vagy szivattyút pedig szokatlan zajokra. |
+| 3-6 havonta | Futtasd újra a kalibrációt, ha változik a talaj összetétele vagy a rendszer viselkedése. |
+
+---
+
+## Viselkedés és védelmi megoldások
+
+- Áramszünet esetén a szelep vagy szivattyú alapból kikapcsolt állapotban marad.
+- A firmware minden öntözési esemény hosszát korlátozza (`WATER_TIME_SEC`), hogy csökkentse az elárasztás kockázatát.
+- Ha a rendszer túl gyakran vagy túl ritkán öntöz, a küszöböket és az időzítéseket állítsd, ne a tartály méretével próbálj kompenzálni.

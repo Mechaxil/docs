@@ -1,0 +1,30 @@
+﻿---
+slug: /solar/testing
+title: Tesztelés és üzembe helyezés
+sidebar_position: 5
+unlisted: true
+---
+
+import GlossaryTerm from '@site/src/components/GlossaryTerm';
+
+# Tesztelés és üzembe helyezés
+
+## Bekapcsolás előtti ellenőrzések
+- Ellenőrizd újra minden akkumulátoros és PV csatlakozás polaritását.
+- Győződj meg róla, hogy a biztosítékok a helyükön vannak, és a cellán van védelmi <GlossaryTerm term="PCB" />.
+- Ellenőrizd a Waveshare panel pontos típusát és a maximális PV feszültséget.
+
+## Alaptesztek
+
+| Teszt | Módszer | Elfogadási feltétel / Megjegyzés |
+|------|---------|----------------------------------|
+| PV Voc | Nyitott kapocsfeszültség mérése napsütésben | Egyetlen 12 V-os panelnél jellemzően ~18 V |
+| PV Isc | Rövid idejű rövidzárási áram mérés lakatfogóval | Nagyjából egyezzen a panel specifikációjával, kb. 0.83 A |
+| Töltés <GlossaryTerm term="LED" /> / állapot | Csatlakoztasd a PV-t és az akkumulátort, majd ellenőrizd a Waveshare <GlossaryTerm term="LED" /> / állapotjelzését | A modulnak töltési állapotot kell mutatnia |
+| Kimeneti sínek | 5 V / 3.3 V mérése terhelés alatt | A névleges értéktől legfeljebb +-5% eltérés |
+| Mágnesszelep kapcsolása | Aktiváld <GlossaryTerm term="MOSFET" /> segítségével, mérd az áramot és a hőmérsékletet | Az áram feleljen meg a specifikációnak, ne legyen túlmelegedés |
+
+## Üzembe helyezési napló
+- Hozz létre egy `testing/logs/` mappát, és rögzítsd: dátum, Voc, Isc, akkufeszültség, töltőáram, megjegyzések.
+
+Karbantartás: évente ellenőrizd a tömítéseket, havonta pedig az akkumulátor állapotát.

@@ -1,0 +1,65 @@
+﻿---
+id: auto-watering-pot
+title: Smart Auto-Watering Pot
+sidebar_label: Áttekintés
+slug: /projects/auto-watering-pot
+description: Nyílt forráskódú, egyetlen cserépre készült automata öntözőrendszer mikrokontrollerrel, kapacitív talajnedvesség-érzékelővel, PWM-mel vezérelt szeleppel és 3D nyomtatott tartállyal.
+---
+
+import GlossaryTerm from '@site/src/components/GlossaryTerm';
+import Discussion from '@site/src/components/Discussion';
+import HoverImage from '@site/src/components/HoverImage'
+
+> **Státusz:** Prototípus
+> **Cél:** Egyszerű, nyílt forráskódú automata öntözőrendszer, amelyet bárki megépíthet és továbbkísérletezhet.
+
+A **Mechaxil Smart Auto-Watering Pot** egy kompakt rendszer, amely automatikusan gondoskodik egyetlen növény öntözéséről.
+
+Egy <GlossaryTerm term="Capacitive Soil Moisture Sensor" /> csatlakozik a <GlossaryTerm term="Development board of choice" /> panelhez, amelyen <GlossaryTerm term="MicroPython" /> fut.
+Amikor a talaj kiszárad, a vezérlő egy <GlossaryTerm term="MOSFET Module" /> segítségével, finom <GlossaryTerm term="PWM" /> lágyindítással meghajt egy kis <GlossaryTerm term="DC Valve" />-ot vagy szivattyút, így a 3D nyomtatott tartályból víz jut a cserépbe.
+
+<HoverImage
+  defaultSrc="/img/products/Auto-Watering-Kit/Auto_Watering_Kit_Closed.webp"
+  hoverSrc="/img/products/Auto-Watering-Kit/Auto_Watering_Kit_Open.webp"
+  alt="Automata öntözőcserép zárt és nyitott fedéllel, a belső alkatrészekkel"
+  width="500px"
+  height="500px"
+/>
+
+<a href="https://mechaxil.com/products/mechaxil-auto-watering-kit" className="btn">A kit megvásárlása</a>
+
+<a href="https://mechaxil.com/collections/smart-agriculture-projects" className="btn">Az alkatrészek megvásárlása</a>
+
+---
+
+## Főbb jellemzők
+
+- <GlossaryTerm term="Development board of choice" /> + <GlossaryTerm term="MicroPython" /> firmware
+- <GlossaryTerm term="Capacitive Soil Moisture Sensor" />
+- <GlossaryTerm term="PWM" /> lágyindítású szelepvezérlés az induló áramlökés és a feszültségesés csökkentésére
+- <GlossaryTerm term="RGB LED" /> vagy hagyományos <GlossaryTerm term="LED" /> visszajelzés
+- 3D nyomtatható tartály és elektronikai ház
+
+---
+
+## Mechanikai kialakítás
+
+Minden alkatrész úgy készült, hogy egy átlagos, 0.4 mm-es fúvókával szerelt <GlossaryTerm term="FDM 3D Printing" /> nyomtatón elkészíthető legyen.
+
+**Ajánlott anyagok:** <GlossaryTerm term="PETG" /> vagy <GlossaryTerm term="ASA" />, mert jobban bírják a vizet és a hőt, mint a <GlossaryTerm term="PLA" />, bár utóbbi is használható.
+
+| Alkatrész | Leírás | Megjegyzések |
+|-----------|--------|--------------|
+| Tartály | 200-500 ml-es víztartály | Vízálló nyomat, 2-3 mm falvastagság, legalább 4 perem, opcionális belső epoxi tömítés |
+| Elektronikai doboz | Kis ház a vezérlőnek és a <GlossaryTerm term="MOSFET" />-nek | A kábelnyílások legyenek magasan az oldalfalon, a fedél csavarozható vagy bepattintható |
+
+Az STL és CAD fájlokat a dokumentációval együtt tesszük közzé, amint a v0.1 hardver teljes validációja elkészül.
+
+---
+
+## Projektcélok
+
+1. Az első **Mechaxil open kit** létrehozása: kicsi, teljesen dokumentált, reprodukálható.
+2. Az analóg mérés, a <GlossaryTerm term="PWM" /> teljesítményszabályzás és a biztonságos tápelosztás alapjainak bemutatása.
+
+<Discussion />

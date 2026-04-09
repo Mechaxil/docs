@@ -1,74 +1,74 @@
----
+﻿---
 slug: /getting-started
-title: Kezdő lépések — Gyors áttekintés
+title: Gyors áttekintés
 sidebar_position: 0
 ---
 
 import GlossaryTerm from '@site/src/components/glossaryTerm'
 import Checklist from '@site/src/components/Checklist'
 
-# Kezdő lépések — Gyors áttekintés
+# Első lépések - Gyors áttekintés
 
-Üdv! Ez a **gyors beszálló oldal** azoknak, akik a webshopból, közösségiből vagy máshonnan találtak ránk, és **gyorsan el akarnak indulni** egy projekttel.
+Üdv! Ez a gyors kezdőoldal azoknak szól, akik a webshopból, közösségi felületekről vagy máshonnan érkeztek, és gyorsan szeretnének belevágni egy projektbe.
 
-Ha ide érkeztél: király. Itt **gyorsan beállítasz mindent**, kapsz linket a projekt-doksikhoz, látod **mit érdemes beszerezni**, és **hol kérj segítséget**.
+Ha itt landoltál, jó helyen jársz. Ez az oldal segít gyorsan elindulni, megmutatja a projektdokumentációkat, hogy mit érdemes beszerezni, és azt is, hol kapsz segítséget.
 
 ---
 
 ## Funkciók
 
-Először érdemes megismerni, **hogyan működik a dokumentáció**. Néhány egyedi funkciót is raktunk a Docusaurusra (ez az oldal is ezekre épül):
-- A leghasznosabb a **<GlossaryTerm term="Tooltips without links" />** és a **<GlossaryTerm term="Tooltips with links" />**. A második általában **gyors ugrás** a doksi egy részére vagy egy webshop-termékre.
-- Van **anyagjegyzék** is (**<GlossaryTerm term="BOM" />** – Bill of Materials), pl. így:
+Elsőként érdemes megnézni, hogyan működik a dokumentáció. Több egyedi funkciót is hozzáadtunk a Docusaurushoz:
+- Az egyik leghasznosabb a **<GlossaryTerm term="Tooltips without links" />** és a **<GlossaryTerm term="Tooltips with links" />**. Utóbbi általában gyors hozzáférést ad a dokumentáció egy részéhez vagy egy webshopos termékhez.
+- A másik funkció a projekthez használt anyagok listája, vagyis a **<GlossaryTerm term="BOM" />**, például így:
 
 <Checklist 
 project="boarding"
 items={[
     "Kreativitás",
-    "Tanulási hajlandóság",
-    "Szórakozás",
+    "Tanulási kedv",
+    "Jókedv",
 ]} storageKey="shopping-list" />
 
 ---
 
 ## Kinek szól?
-- Hobbistáknak, akik a webshopból vesznek alkatrészt/kitet és **vezetett projektet** szeretnének
-- Oktatóknak, akik **oktatási kiteket és projekteket** keresnek
-- Makereknek, akik **gyors, biztonságos prototipizálást** és projektalapot akarnak
+- Makereknek, akik gyors és biztonságos módot keresnek prototípusok és projektalapok építésére
+- Hobbistáknak, akik alkatrészt vagy kitet vásárolnának a webshopból, és vezetett projektet szeretnének
+- Oktatóknak, akik oktatási kiteket és projekteket keresnek
 
 ---
 
-## 3 lépéses gyors rajt
+## Gyors kezdés 3 lépésben
 
-1. **Olvasd el a biztonsági részt** — mindig nézd át a „Figyelmeztetések” szekciót, mielőtt bármit csinálsz.
-2. **Ellenőrizd a BOM-ot** — hasonlítsd össze a megvett cuccokat a projekt BOM-jával (Solar, Smart-Ag stb.). Szerezz be **hiányzó védelmeket** (biztosíték, védelem PCB, doboz, védőkesztyű, szemüveg) még **bekapcsolás előtt**.
-3. **Indítsd el, biztonságosan** — száraz munkaterületen szereld, tegyél biztosítékot, a **napelemet (PV) legutoljára** csatlakoztasd. Futtasd le az alap **üzembe helyezési teszteket** a Testing doksiban.
+1. **Olvasd el a biztonsági részt** - Mielőtt bármit csinálnál, mindig nézd át a „Figyelmeztetések” részt.
+2. **Ellenőrizd a BOM-ot** - Hasonlítsd össze a megvásárolt alkatrészeket a projekt BOM-jával. Szerezd be a hiányzó védelmi elemeket is, például biztosítékot, védő PCB-t, házat, kesztyűt vagy védőszemüveget.
+3. **Kapcsold be biztonságosan** - Száraz munkaterületen szerelj, használj biztosítékot, és a PV oldalt csatlakoztasd utoljára. Futtasd le az alap üzembe helyezési teszteket a Testing dokumentáció alapján.
 
 ---
 
 ## Biztonság
-- **Mindig** használj védőfelszerelést, főleg **Li-ion cellák** és más veszélyes elemek mellett. Egy alap készlet:
+- **Mindig** használj védőfelszerelést, különösen Li-ion cellák és más veszélyes elemek használatakor. Az alapfelszerelés:
   - Védőszemüveg
   - Védőkesztyű
-  - Jó szellőzés (forrasztásnál különösen)
-- Hagyd magára csak akkor, ha a doksiban lévő **üzembe helyezési ellenőrzőlista** rendben van.
+  - Jó szellőzés, különösen forrasztás közben
+- Mielőtt felügyelet nélkül hagyod a rendszert, végezd el a dokumentációban szereplő üzembe helyezési ellenőrzéseket.
 
 ---
 
 ## Hol kapsz segítséget?
-- **Discord**: valós idejű segítség a közösségtől — [Discord](https://discord.gg/CecTK8quUc). **Fotók + mérések** sokat gyorsítanak a hibakeresésen.  
-- **Webshop / Alkatrész DB**: nyiss ticketet, ha egy alkatrész hibás/hiányzik.  
-- **GitHub**: jelents hibát a repóban (doksik / firmware).  
-- **Email**: ```zavoczkiattila@mechaxil.com``` .
+- **Discord**: csatlakozz a közösséghez valós idejű segítségért [Discord](https://discord.gg/CecTK8quUc). Fotók és mérések sokat gyorsítanak a hibakeresésen.
+- **Webshop / Item DB**: nyiss support ticketet, ha egy alkatrész hibás vagy hiányzik.
+- **GitHub**: jelents hibát a dokumentációval vagy firmware-rel kapcsolatban [GitHub](https://github.com/Mechaxil).
+- **Email**: `attila.zavoczki@mechaxil.com`.
 
-Segítségkérésnél írd meg/csatold: **SKU-lista**, **bekötés fotói**, **akku feszültség**, **PV Voc**, és a modulok **LED/állapot** jelzései.
+Ha segítséget kérsz, érdemes mellékelni az SKU-listát, a bekötés fotóit, az akkufeszültséget, a PV Voc értékét, valamint a modul LED-jeinek és állapotjelzéseinek adatait.
 
-## Hozzájárulás & haladó felhasználók
-Javítanál a doksikon, példákon, firmware-en, vagy beszállnál a **project bounty** programba? **Pull request** jöhet GitHubon. Használd a `firmware/` és `docs/` mappákat, és kövesd a repó hozzájárulási jegyzeteit.
+## Hozzájárulás és haladó felhasználók
+Segítenél a dokumentáció, a példák vagy a firmware javításában, esetleg részt vennél a project bounty programban? GitHubon várjuk a pull requesteket. Használd a `firmware/` és `docs/` mappákat, és kövesd a repository hozzájárulási útmutatóját.
 
 ---
 
-## Licenc & köszönet
-Ez a projekt és a dokumentáció **nyílt forráskódú**. Hivatkozd a repót, és tartsd be a projekt gyökerében lévő **LICENSE** feltételeit.
+## Licenc és köszönet
+Ez a projekt és a dokumentáció nyílt forráskódú. Hivatkozz a repositoryra, és kövesd a projekt gyökerében található LICENSE fájl feltételeit.
 
 ---

@@ -1,0 +1,79 @@
+﻿---
+id: github-how-to
+sidebar_label: GitHub alapok
+slug: /guides/github
+title: GitHub használata a projekthez
+---
+
+A GitHub az a hely, ahol az összes projektfájl, firmware és dokumentáció tárolva van és verziózva marad.
+Használhatod **letöltésre**, **hozzájárulásra**, vagy **hibák jelentésére** a Smart Auto-Watering Pot projekthez.
+
+---
+
+## 1. Amire szükséged van
+
+- *(Opcionális)* Egy GitHub-fiók → [Hozz létre egyet itt](https://github.com/join)
+- Egy számítógép webböngészővel (Chrome, Edge, Firefox)
+- *(Opcionális)* Telepített Git, ha parancssorból szeretnél klónozni
+
+---
+
+## 2. A projektfájlok letöltése
+
+A firmware és a dokumentáció legfrissebb verzióját a repositoryból töltheted le:
+
+1. Látogass el a **[github.com/mechaxil](https://github.com/mechaxil)** oldalra, vagy nyisd meg közvetlenül a projekt dokumentációs oldaláról.
+2. Kattints a **Code → Download ZIP** gombra.
+3. Csomagold ki a ZIP fájlt valahova a számítógépeden.
+
+![GitHub Download ZIP](/img/guides/github-download-zip.png)
+
+Alternatívaként, ha a Git telepítve van, közvetlenül is klónozhatod:
+
+```bash
+git clone https://github.com/mechaxil/smart-auto-watering-pot.git
+```
+
+---
+
+## 3. Fájlok böngészése és szerkesztése online
+
+A fájlokat közvetlenül a böngészőből is olvashatod vagy szerkesztheted:
+
+- Navigálj a mappák között, például a `firmware/` vagy `docs/` könyvtárakban
+- Kattints a **ceruza ikonra** egy módosítás javaslatához; a GitHub automatikusan létrehoz egy forkot
+- Mentsd el a módosítást, és a GitHub javasolni fog egy **Pull Requestet** ellenőrzésre
+
+![Editing file in github](/img/guides/github-edit.png)
+
+---
+
+## 4. Hibák jelentése vagy fejlesztési javaslatok
+
+Ha találtál egy problémát vagy van egy ötleted:
+
+1. Menj az **Issues** fülre
+2. Kattints a **New Issue** gombra
+3. Válaszd ki a legmegfelelőbb sablont
+4. Töltsd ki érthetően, és ha lehet, csatolj képernyőképet is
+
+![GitHub Issues tab](/img/guides/github-issues.png)
+
+---
+
+## 5. Hozzájárulás Pull Requestekkel
+
+Ha módosítottad a kódot, firmware-t vagy dokumentációt:
+
+1. Forkold a repositoryt
+2. Végezd el a módosításokat
+3. Commitold a változtatásokat rövid, leíró üzenettel
+4. Nyiss egy Pull Requestet a forkodból a fő repository felé
+
+A csapat rendszeresen átnézi a hozzájárulásokat, és a kisebb javításokat is értékeljük, például az elgépelések javítását.
+
+---
+
+## 6. Következő lépések
+
+Miután letöltötted a projektet, készen állsz a firmware feltöltésére a mikrokontrolleredre.

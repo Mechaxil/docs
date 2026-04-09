@@ -1,14 +1,14 @@
-{
+﻿{
   "title": {
     "message": " ",
     "description": "The title in the navbar"
   },
   "logo.alt": {
-    "message": "My Site Logo",
+    "message": "Mechaxil logó",
     "description": "The alt text of navbar logo"
   },
   "item.label.Documentations": {
-    "message": "Documentations",
+    "message": "Dokumentációk",
     "description": "Navbar item with label Documentations"
   },
   "item.label.Blog": {

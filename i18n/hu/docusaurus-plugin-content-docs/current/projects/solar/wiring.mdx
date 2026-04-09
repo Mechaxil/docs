@@ -1,0 +1,36 @@
+﻿---
+slug: /solar/wiring
+title: Bekötés és telepítés
+sidebar_position: 4
+unlisted: true
+---
+
+import GlossaryTerm from '@site/src/components/GlossaryTerm';
+
+# Bekötés és telepítés
+
+## Gyors biztonsági ellenőrzőlista
+
+- Csatlakoztatás előtt ellenőrizd, hogy a PV Voc sztringenként legfeljebb 24 V a Waveshare számára.
+- Szerelj soros biztosítékot a PV pozitív ágába.
+- Kültéri kábelezéshez használj PV-minősítésű kábelt és kábelátvezetőt.
+- A fém tartószerkezetet és a házat ahol lehet, földeld le.
+- A nagyáramú alkatrészeket, például a MOSFET-eket és buck konvertereket hőelvezetésre alkalmas fém felületre szereld.
+
+## Példa bekötés szövegesen
+
+```
+PV+ -> soros biztosíték -> Waveshare PV+
+PV- -> Waveshare PV-
+Battery+ -> Waveshare BAT+
+Battery- -> Waveshare BAT-
+Waveshare 5V/3.3V out -> Buck (ha kell) -> Pico/<GlossaryTerm term="ESP32" /> táp
+Battery + -> <GlossaryTerm term="MOSFET" /> V+ ; <GlossaryTerm term="MOSFET" /> drain -> Solenoid + ; Solenoid - -> <GlossaryTerm term="MOSFET" /> source -> Battery - (közös föld)
+```
+
+## Vezeték keresztmetszet és csatlakozók
+- Panelekhez az áramtól és hossztól függően 2.5-4 mm2 PV kábel ajánlott.
+- Rövid akkumulátoros és terhelési vezetékhez 2 A alatt 0.5-0.75 mm2 elegendő.
+- A panelekhez MC4 csatlakozót használj, a Waveshare kisebb jel- vagy tápvezetékeihez pedig adott esetben JST-PH-t.
+
+**TODO:** szúrd be a feliratozott bekötési ábrát `images/wiring_diagram.png` néven.

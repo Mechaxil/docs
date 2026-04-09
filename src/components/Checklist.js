@@ -34,7 +34,7 @@ const Checklist = ({ project, items, storageKey = "my-checklist" }) => {
             checked={!!checked[item]}
             onChange={() => toggleItem(item)}
           />
-          <GlossaryTerm term={item}>{item}</GlossaryTerm>
+          <GlossaryTerm term={item} />
         </label>
       ))}
     </div>

@@ -1,0 +1,57 @@
+﻿---
+id: rp2040-pico-w
+title: Raspberry Pi Pico W
+sidebar_label: Pico W
+slug: /products/rp2040-pico-w
+description: Raspberry Pi Pico W RP2040 mikrokontrollerrel és beépített Wi-Fi-vel. Ideális MicroPython, C/C++ és Rust projektekhez.
+tags: [microcontroller, raspberry-pi, rp2040, wifi]
+image: /img/mechaxil.png
+---
+import GlossaryTerm from '@site/src/components/GlossaryTerm';
+
+<img alt="Raspberry Pi Pico W" src="https://mechaxil.com/cdn/shop/files/raspberry_pico_2_w.webp?v=1758040366&width=1200" width="640" />
+
+> **SKU:** DEV-RPI-PICO-W • **Brand:** Raspberry Pi • **Type:** Microcontroller Board
+
+## Kiemelt jellemzők
+- Kétmagos RP2040 @ 133 MHz
+- 2.4 GHz Wi-Fi (Infineon CYW43439)
+- 26 többfunkciós GPIO
+- PIO state machine-ek egyedi protokollokhoz
+- Működik <GlossaryTerm term="MicroPython" />, C/C++ és Rust környezetben
+
+## Specifikációk
+
+| Mező | Érték |
+|------|-------|
+| Modell | Pico W |
+| MCU | RP2040 kétmagos Arm Cortex-M0+ @ 133 MHz |
+| RAM / Flash | 264 KB SRAM / 2 MB QSPI Flash |
+| Vezeték nélküli kapcsolat | 2.4 GHz Wi-Fi (802.11n) |
+| GPIO | 26 pin (<GlossaryTerm term="I²C" />, SPI, <GlossaryTerm term="UART" />, <GlossaryTerm term="PWM" />, <GlossaryTerm term="ADC" />) |
+| USB | Micro-USB (csak device mód) |
+| Tápfeszültség | 5 V USB vagy 1.8-5.5 V VSYS |
+| Méret | 51 x 21 mm |
+| Tanúsítványok | CE, FCC, RoHS |
+| HS-kód | 8471500000 |
+
+## Kiosztási rajz
+
+![Raspberry Pi Pico W pinout](/img/products/rp2040-pico/pico-pinout.svg)
+
+*A pinout ábra a Raspberry Pi Foundation jóvoltából. Licenc: CC BY-ND 4.0. [Forrás](https://github.com/raspberrypi/documentation/tree/0b1b995626a8d35ca52cabf9281f9363c3b044f6/documentation/asciidoc/microcontrollers/pico-series/images)*
+
+## Első lépések
+
+```python
+# MicroPython villogó LED példa
+from machine import Pin, sleep
+led = Pin("LED", Pin.OUT)
+while True:
+    led.toggle()
+    sleep(0.5)
+```
+
+## Részletesebb dokumentáció
+
+[Hivatalos Raspberry Pi dokumentáció](https://www.raspberrypi.com/documentation/microcontrollers/pico-series.html)

@@ -1,0 +1,23 @@
+﻿---
+slug: /solar/firmware
+title: Firmware
+sidebar_position: 6
+unlisted: true
+---
+
+import GlossaryTerm from '@site/src/components/GlossaryTerm';
+
+# Firmware (helyőrző)
+
+Ez a projekt különválasztja a **helyi vezérlést** (Raspberry Pi Pico) és a **telemetriát** (ESP32-C3). A kódot a `firmware/` mappába kell tenni, és innen lehet majd hivatkozni rá.
+
+## Pico (helyi vezérlés)
+- Feladatai: szenzorok olvasása, terhelések vezérlése, alacsony fogyasztású alvó mód, RTC alapú időzítés, biztonsági lekapcsolás alacsony akkuszintnél.
+- Javaslat: gyors prototípushoz MicroPython, élesebb teljesítményhez C SDK.
+
+**TODO:** `firmware/pico/main.py` és az API dokumentáció hozzáadása.
+
+## ESP32-C3 (telemetria)
+- Feladatai: MQTT/HTTP telemetria, OTA frissítések, távoli dashboard.
+
+**TODO:** `firmware/esp32/README.md` és mintakód hozzáadása.

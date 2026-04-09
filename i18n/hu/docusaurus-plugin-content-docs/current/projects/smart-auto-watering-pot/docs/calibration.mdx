@@ -1,0 +1,94 @@
+﻿---
+id: auto-watering-pot-calibration
+title: Szenzorkalibráció
+sidebar_label: Kalibráció
+slug: /projects/auto-watering-pot/calibration
+---
+
+import GlossaryTerm from '@site/src/components/GlossaryTerm';
+
+A <GlossaryTerm term="Capacitive Soil Moisture Sensor" /> helyes kalibrációja elengedhetetlen a kiszámítható öntözéshez.
+Ennél a szenzortípusnál **a magasabb <GlossaryTerm term="ADC" /> érték szárazabb talajt jelent**.
+
+Ez az oldal egy egyszerű eljárást mutat be, amellyel reális küszöbértékeket határozhatsz meg a saját földedhez és cserepedhez.
+
+---
+
+## 1. A szenzor csatlakoztatása
+
+Kösd be a szenzort a <GlossaryTerm term="Development board of choice" /> panelhez:
+
+- VCC → 3.3 V vagy 5 V a szenzor specifikációja szerint
+- GND → GND
+- OUT → <GlossaryTerm term="ADC" /> bemenet a használt panel GPIO kiosztása alapján
+
+Ügyelj rá, hogy a firmware még **ne** fusson, így kézi teszteléshez használhatod a <GlossaryTerm term="REPL" /> felületet.
+
+> ⚠️ Mielőtt a fejlesztőpanelt csatlakoztatod, győződj meg róla, hogy a szelep le van választva, mert egy véletlen áramlökés kárt tehet a számítógépben.
+
+---
+
+## 2. Egyszerű <GlossaryTerm term="ADC" /> tesztszkript futtatása
+
+Használd ezt a rövid szkriptet a <GlossaryTerm term="MicroPython" /> <GlossaryTerm term="REPL" /> felületén, hogy másodpercenként kiírja a nyers <GlossaryTerm term="ADC" /> értéket:
+
+```python
+from machine import Pin, ADC
+from time import sleep
+
+adc = ADC(Pin(0))  # Ezt állítsd arra a GPIO pinre, amelyre a szenzor OUT csatlakozik, például ESP32-C3 esetén GPIO0
+
+while True:
+    print(adc.read_u16())
+    sleep(1)
+```
+
+---
+
+## 3. Értékek feljegyzése különböző állapotokban
+
+Mérd meg és jegyezd fel az <GlossaryTerm term="ADC" /> értékeket az alábbi esetekben:
+
+1. **Levegőben** (a szonda nem ér hozzá semmihez)
+2. **Száraz földben** (a cserépben, olyan száraz állapotban, amit még elfogadhatónak tartasz)
+3. **Nedves földben** (alapos öntözés után, amikor a víz már beszívódott)
+
+Jellemzően valami ilyesmit fogsz látni, ez csak példa:
+
+| Állapot | Példa <GlossaryTerm term="ADC" /> érték |
+|---------|-----------------------------------------|
+| Levegő  | ~50 000 |
+| Száraz föld | ~31 500 |
+| Nedves föld | ~23 000 |
+
+Az értékek eltérhetnek, a lényeg a relatív különbség.
+
+---
+
+## 4. Küszöbértékek kiválasztása
+
+A száraz és a nedves értékek alapján állíts be két küszöböt:
+
+- `DRY_THRESHOLD` - e fölött a talaj túl száraznak számít, ezért elindul az öntözés
+- `WET_THRESHOLD` - ez alatt a talaj már elég nedvesnek számít, ezért leáll az öntözés
+
+Példa a fenti táblázat alapján:
+
+- `DRY_THRESHOLD = 30000`
+- `WET_THRESHOLD = 25000`
+
+Ez ad némi <GlossaryTerm term="Hysteresis" /> tartományt, így a rendszer nem fog minden apró ingadozásra ki-be kapcsolni.
+
+Szerkeszd át ezeket a konstansokat a `main.py` fájlban, majd töltsd újra a panelre.
+
+---
+
+## 5. Ellenőrzés valós használat közben
+
+Hagyd a rendszert néhány napig működni, és figyeld:
+
+- milyen gyakran öntöz
+- túl nedves vagy túl száraz marad-e a föld
+- milyen <GlossaryTerm term="ADC" /> értékek jelennek meg az egyes öntözési események körül
+
+Finomhangold a `DRY_THRESHOLD`, `WET_THRESHOLD`, `WATER_TIME_SEC` és `MEASURE_INTERVAL` értékeket, amíg a kívánt módon nem működik az adott növényhez és talajhoz.

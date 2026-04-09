@@ -1,0 +1,29 @@
+﻿---
+slug: /solar/bom
+title: Anyagjegyzék (BOM)
+sidebar_position: 2
+unlisted: true
+---
+
+import { useState } from 'react';
+import Checklist from '@site/src/components/Checklist'
+import GlossaryTerm from '@site/src/components/GlossaryTerm';
+
+# Solar <GlossaryTerm term="BOM" />
+
+<Checklist 
+project="solar"
+items={[
+    "Development board of choice",
+    "12 V 10 W solar panel",
+    "18650 Cell",
+    "1x18650 holder w/ wires",
+    "Waveshare Solar Power Manager",
+    "Enclosure",
+    "Cables",
+    "Crimper",
+    "Multimeter",
+    "Soldering Iron",
+]} storageKey="shopping-list" />
+
+**Megjegyzések**: A Waveshare korlátozza a töltőáramot. Nyers cellákat ne köss párhuzamosan megfelelő akkukezelő rendszer vagy akkucsomag nélkül. Telepítés esetén tegyél biztosítékot a PV és az akkumulátor oldalára is.

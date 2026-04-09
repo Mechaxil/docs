@@ -1,0 +1,48 @@
+﻿---
+id: auto-watering-pot-bom
+title: Anyagjegyzék
+sidebar_label: BOM
+slug: /projects/auto-watering-pot/bom
+---
+
+import { useState } from 'react';
+import Checklist from '@site/src/components/Checklist';
+import GlossaryTerm from '@site/src/components/GlossaryTerm';
+
+## Interaktív bevásárlólista
+
+Ezzel a listával követheted, mi van már meg az építéshez. Az állapot helyben, a böngésződben mentődik.
+
+<Checklist
+  project="auto-watering-pot"
+  items={[
+    "Development board of choice",
+    "Capacitive Soil Moisture Sensor",
+    "MOSFET Module",
+    "Valve 12V DC",
+    "5 V USB wall power supply (≥ 2 A)",
+    "MT3608",
+    "Flyback Diode (e.g. 1N5819)",
+    "Wires",
+    "3D-printed tank",
+    "Basic tools (screwdriver, wire stripper, etc.)",
+  ]}
+  storageKey="shopping-list-auto-watering-pot"
+/>
+
+---
+
+## Részletes BOM
+
+| Mennyiség | Alkatrész | Példa / Megjegyzés |
+|-----------|----------:|--------------------|
+| 1 | <GlossaryTerm term="Development board of choice" /> | Bármely, <GlossaryTerm term="MicroPython" />-képes panel USB-vel és opcionális beépített <GlossaryTerm term="LED" />-del |
+| 1 | <GlossaryTerm term="Capacitive Soil Moisture Sensor" /> | Analóg kimenetű |
+| 1 | <GlossaryTerm term="MOSFET Module" /> | Logic-level <GlossaryTerm term="MOSFET" /> (IRLZ44N, AO3400A vagy hasonló) breakout panelen |
+| 1 | <GlossaryTerm term="DC" /> szivattyú vagy <GlossaryTerm term="DC Valve" /> | Kis 12 V-os szelep |
+| 1 | <GlossaryTerm term="USB Wall Power Supply" /> | Szivattyúindításhoz ≥ 2 A ajánlott |
+| 1 | <GlossaryTerm term="DC-DC Converter" /> | A szelep vezérléséhez |
+| 1 | <GlossaryTerm term="Flyback Diode" /> | 1N5819 vagy hasonló Schottky dióda |
+| 1 | <GlossaryTerm term="Proto Board" /> (opcionális) | Kézi huzalozáshoz |
+| 3 | Vezeték | Különböző színű vezetékek |
+| — | Filament (<GlossaryTerm term="PETG" /> / <GlossaryTerm term="ASA" /> / <GlossaryTerm term="PLA" />) | A tartályhoz, a szelep tartójához és az elektronikai házhoz |

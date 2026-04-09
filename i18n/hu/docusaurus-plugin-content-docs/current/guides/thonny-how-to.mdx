@@ -1,0 +1,84 @@
+﻿---
+id: thonny-how-to
+sidebar_label: Thonny használata
+slug: /guides/thonny
+title: Mikrokontrollerek programozása Thonnyval
+---
+
+import GlossaryTerm from '@site/src/components/GlossaryTerm';
+
+**Thonny** egy könnyű Python IDE, amely nagyon egyszerűvé teszi olyan panelek programozását, mint az **<GlossaryTerm term="ESP32" />** és a **<GlossaryTerm term="Raspberry Pi Pico" />**, **<GlossaryTerm term="MicroPython" />** használatával.
+
+Ez az útmutató bemutatja, hogyan telepítsd a Thonnyt, hogyan flasheld a <GlossaryTerm term="MicroPython" /> firmware-t, és hogyan töltsd fel a `main.py` scriptet a Smart Auto-Watering Pot projekthez.
+
+---
+
+## 1. Thonny telepítése
+
+1. Töltsd le a Thonnyt innen: [https://thonny.org](https://thonny.org)
+2. Futtasd a telepítőt, és kövesd az utasításokat
+3. Indítsd el a Thonnyt a telepítés után
+
+![Installing Thonny](/img/guides/thonny-install.png)
+
+---
+
+## 2. A panel csatlakoztatása
+
+1. Csatlakoztasd a panelt a számítógéphez USB-kábellel
+2. Ha szükséges, engedélyezd a Windows vagy macOS számára a driverek telepítését
+3. Meg kell jelennie egy új COM vagy soros portnak
+
+---
+
+## 3. <GlossaryTerm term="MicroPython" /> firmware flashelése
+
+Ezt csak **egyszer kell elvégezni panelenként**.
+
+1. Thonnyban menj ide: **Tools → Options → Interpreter**
+2. Válaszd ki a panel típusát a listából, például az „<GlossaryTerm term="ESP32" />” vagy a „<GlossaryTerm term="Raspberry Pi Pico" />” lehetőséget
+3. Kattints az **Install or Update <GlossaryTerm term="MicroPython" />** gombra
+4. Várd meg, amíg a folyamat befejeződik
+
+![Installing <GlossaryTerm term="MicroPython" /> firmware in Thonny](/img/guides/thonny-flash.png)
+
+---
+
+## 4. A <GlossaryTerm term="REPL" /> kapcsolat ellenőrzése
+
+A Thonny alsó részén látni fogod a **<GlossaryTerm term="MicroPython" /> <GlossaryTerm term="REPL" />** interaktív konzolt.
+Próbáld beírni:
+
+```python
+print("Hello from MicroPython!")
+```
+
+Ha a szöveg megjelenik, a panel használatra kész.
+
+---
+
+## 5. A firmware feltöltése
+
+1. Nyisd meg a projekt `firmware/` mappájából a `main.py` fájlt
+2. Kattints a **Run → Save As...** menüpontra, majd válaszd a **<GlossaryTerm term="MicroPython" /> device** lehetőséget
+3. Nevezd el a fájlt `main.py`-nak, így induláskor automatikusan lefut
+4. Kattints a **Save** gombra
+
+---
+
+## 6. A futás figyelése
+
+Mentés után a kódnak azonnal el kell indulnia.
+A Thonny shellben követheted a soros kimenetet, ahol élő nedvességértékeket és öntözési eseményeket fogsz látni.
+
+---
+
+## 7. Következő lépések
+
+- [A szenzor kalibrálása](/projects/auto-watering-pot/calibration)
+- [A rendszer telepítése](/projects/auto-watering-pot/deployment)
+- [Fejlesztési ötletek és hozzájárulás](/projects/auto-watering-pot/conclusion)
+
+Ha minden működik, a növényed már képes magáról gondoskodni, te pedig elkezdhetsz saját funkciókkal kísérletezni.
+
+---

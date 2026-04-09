@@ -1,26 +1,58 @@
-{
+﻿{
   "version.label": {
-    "message": "Next",
+    "message": "Következő",
     "description": "The label for version current"
   },
   "sidebar.mainSidebar.category.Getting Started": {
-    "message": "Getting Started",
+    "message": "Első lépések",
     "description": "The label for category Getting Started in sidebar mainSidebar"
   },
   "sidebar.mainSidebar.category.Guides": {
-    "message": "Guides",
+    "message": "Útmutatók",
     "description": "The label for category Guides in sidebar mainSidebar"
   },
   "sidebar.mainSidebar.category.Projects": {
-    "message": "Projects",
+    "message": "Projektek",
     "description": "The label for category Projects in sidebar mainSidebar"
   },
   "sidebar.mainSidebar.category.Smart Watering Pot": {
-    "message": "Smart Watering Pot",
+    "message": "Okos önöntöző cserép",
     "description": "The label for category Smart Watering Pot in sidebar mainSidebar"
   },
   "sidebar.mainSidebar.category.Products": {
-    "message": "Products",
+    "message": "Termékek",
     "description": "The label for category Products in sidebar mainSidebar"
+  },
+  "sidebar.mainSidebar.category.Getting Started.link.generated-index.title": {
+    "message": "Első lépések",
+    "description": "The generated-index page title for category Getting Started in sidebar mainSidebar"
+  },
+  "sidebar.mainSidebar.category.Getting Started.link.generated-index.description": {
+    "message": "Kezdd itt az eligazodáshoz és a projekt kiválasztásához.",
+    "description": "The generated-index page description for category Getting Started in sidebar mainSidebar"
+  },
+  "sidebar.mainSidebar.category.Guides.link.generated-index.title": {
+    "message": "Útmutatók",
+    "description": "The generated-index page title for category Guides in sidebar mainSidebar"
+  },
+  "sidebar.mainSidebar.category.Guides.link.generated-index.description": {
+    "message": "Lépésről lépésre követhető beállítási és munkafolyamat-útmutatók.",
+    "description": "The generated-index page description for category Guides in sidebar mainSidebar"
+  },
+  "sidebar.mainSidebar.category.Projects.link.generated-index.title": {
+    "message": "Projektek",
+    "description": "The generated-index page title for category Projects in sidebar mainSidebar"
+  },
+  "sidebar.mainSidebar.category.Projects.link.generated-index.description": {
+    "message": "Építési dokumentáció teljes Mechaxil projektekhez.",
+    "description": "The generated-index page description for category Projects in sidebar mainSidebar"
+  },
+  "sidebar.mainSidebar.category.Products.link.generated-index.title": {
+    "message": "Termékek",
+    "description": "The generated-index page title for category Products in sidebar mainSidebar"
+  },
+  "sidebar.mainSidebar.category.Products.link.generated-index.description": {
+    "message": "Referenciaoldalak fejlesztőlapokhoz, modulokhoz és kit hardverekhez.",
+    "description": "The generated-index page description for category Products in sidebar mainSidebar"
   }
 }

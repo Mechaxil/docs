@@ -1,0 +1,9 @@
+﻿{
+  "label": "Termékek",
+  "position": 4,
+  "link": {
+    "type": "generated-index",
+    "title": "Termékek",
+    "description": "Hardveres referenciaoldalak támogatott fejlesztőpanelekhez, modulokhoz és kitekhez."
+  }
+}

@@ -1,0 +1,72 @@
+﻿---
+id: auto-watering-pot-schematics
+title: Bekötés és kapcsolási rajz
+sidebar_label: Kapcsolási rajz
+slug: /projects/auto-watering-pot/schematics
+---
+
+import GlossaryTerm from '@site/src/components/GlossaryTerm';
+import CirkitEmbed from '@site/src/components/CirkitEmbed.js';
+
+## Rendszerábra
+
+<CirkitEmbed id="1194c3aa-529a-4631-9cc5-7e30b15f22fa" />
+
+A vezérlő egy fejlesztőpanel, amely rendelkezik:
+
+:::GLOSSARY-AUTO
+- egy <GlossaryTerm term="ADC" /> bemenettel a <GlossaryTerm term="Capacitive Soil Moisture Sensor" /> számára
+- egy <GlossaryTerm term="PWM" /> kimenettel a <GlossaryTerm term="MOSFET" /> gate vezérléséhez
+- egy <GlossaryTerm term="LED" /> állapotjelzővel
+:::
+
+---
+
+## Pinkiosztás
+
+| Funkció | ESP32-C3 pin | Megjegyzés |
+|---------|--------------|------------|
+| Talajnedvesség-szenzor analóg OUT | GPIO0 (<GlossaryTerm term="ADC" />) | Magasabb érték = szárazabb talaj |
+| Szelep PWM (<GlossaryTerm term="MOSFET" /> gate) | GPIO6 | Logic-level <GlossaryTerm term="PWM" /> (3.3 V) |
+| RGB LED adat | GPIO10 | Beépített <GlossaryTerm term="WS2812" /> (<GlossaryTerm term="NeoPixel" /> / GRB sorrend) |
+| 5 V bemenet | USB VBUS | Csak hálózati USB tápról |
+| Föld | <GlossaryTerm term="GND" /> | Közös referencia a szenzor, a szelep és a vezérlő számára |
+
+---
+
+## Tipikus bekötés
+
+### Talajnedvesség-szenzor
+
+- **VCC** → 3.3 V vagy 5 V a szenzor specifikációja szerint
+- **GND** → GND
+- **OUT** → GPIO0 (<GlossaryTerm term="ADC" />)
+
+A firmware ennél a szenzortípusnál azt feltételezi, hogy **a magasabb <GlossaryTerm term="ADC" /> érték szárazabb talajt jelent**.
+
+### Szelep / szivattyú <GlossaryTerm term="MOSFET" /> segítségével
+
+- A szelep vagy szivattyú **pozitív** ága → 5-12 V tápfeszültség közvetlenül vagy egy <GlossaryTerm term="DC" />-<GlossaryTerm term="DC" /> step-up modulról
+- A szelep vagy szivattyú **negatív** ága → <GlossaryTerm term="MOSFET" /> drain
+- <GlossaryTerm term="MOSFET" /> source → GND
+- <GlossaryTerm term="MOSFET" /> gate → GPIO6, opcionálisan 100-220 ohmos soros ellenállással
+
+Ha az eszköz induktív terhelés, például szivattyú vagy mágnesszelep, tegyél egy <GlossaryTerm term="Flyback Diode" />-ot, például 1N5819-et a terheléssel párhuzamosan úgy, hogy a dióda csíkkal jelölt oldala a pozitív ág felé nézzen.
+
+### Tápellátási topológia
+
+- Az <GlossaryTerm term="ESP32" />-C3 egy **5 V-os USB hálózati tápról** működik.
+- Ha a szelep külön, magasabb feszültségű tápot kap, például 12 V-os adapterről vagy step-up modulról, **minden földet közösíteni kell**.
+
+---
+
+## Biztonsági megjegyzések
+
+> ⚠️ **Csak hálózati USB tápegységet használj**
+> Ezt a projektet ne tápláld PC, laptop, TV vagy monitor USB-portjáról. A szelep vagy szivattyú nagyobb áramot vehet fel, mint amire ezek a portok készültek.
+
+> 💧 **Az elektronika legyen a vízszint fölött**
+> A tartály és a csövezés idővel szivároghat. Az elektronikát tartalmazó dobozt helyezd a maximális vízszint fölé, és ahol lehet, alakíts ki csepphurkot a kábeleken.
+
+> ⚡ **Védelmi alkatrészek**
+> Induktív terheléseknél mindig használj <GlossaryTerm term="Flyback Diode" />-ot, és a szelep vagy szivattyú tápágára érdemes biztosítékot is tenni.

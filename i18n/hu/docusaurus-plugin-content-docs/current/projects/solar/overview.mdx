@@ -1,0 +1,36 @@
+﻿---
+slug: /solar/overview
+title: Áttekintés
+sidebar_position: 1
+unlisted: true
+---
+
+import GlossaryTerm from '@site/src/components/glossaryTerm'
+
+# Solar projekt - Áttekintés
+
+<img 
+  src="/img/solar_project.png" 
+  alt="Példa" 
+  width="600" 
+  height="400"
+  height="auto" 
+  style={{ borderRadius: "12px", margin: "1rem auto", display: "block" }}
+/>
+
+Kis, hálózattól független napelemes töltőrendszer bármilyen 6-24 V-os panelmezőhöz legfeljebb 3.5 A összáramig,
+a **<GlossaryTerm term="Waveshare Solar Power Manager" />** modullal, amely kezeli a <GlossaryTerm term="Li-ion Charging" /> folyamatot, a védelmeket és az állapotjelzéseket,
+valamint egy darab **<GlossaryTerm term="18650 Cell" />** cellával vagy kis, védett pakkal. A helyi vezérlő lehet **<GlossaryTerm term="Raspberry Pi Pico" />**, **<GlossaryTerm term="ESP32" />** vagy bármilyen más mikrokontroller.
+
+**Célok**
+
+- Biztonságos **<GlossaryTerm term="Li-ion Charging" />**
+- Megbízható kültéri telepítés IP-védett házzal, biztosítékokkal és megfelelő kábelezéssel
+- Egyszerű tápellátás vezérlőkhöz és aktuátorokhoz 5 V / 3.3 V sínekkel
+
+**Figyelmeztetések**
+
+- A Li-ion cellák helytelen használat esetén kigyulladhatnak. Használj védett cellákat vagy védelmi <GlossaryTerm term="PCB" />-t és biztosítékokat.
+- A Waveshare panelhez tartozó PV nyitott kapocsfeszültség, vagyis Voc, legyen legfeljebb 24 V.
+
+Gyors linkek: [<GlossaryTerm term="BOM" />](./bom) • [Kapcsolási rajz](./schematics) • [Bekötés](./wiring) • [Tesztelés](./testing) • [Firmware](./firmware)
