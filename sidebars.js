@@ -71,6 +71,7 @@ const sidebars = {
       items: [
         'products/rp2040-pico-w',
         'products/D4184',
+        'products/pico-io-board',
       ],
     },
   ],
