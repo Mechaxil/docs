@@ -131,6 +131,15 @@ export const glossary = {
       en: `<div>A compact version of Python for microcontrollers like the ESP32 and Raspberry Pi Pico. It lets you script directly on embedded hardware.</div>`,
       hu: `<div>A Python egy kompakt változata mikrokontrollerekhez, például ESP32-höz vagy Raspberry Pi Picohoz. Közvetlenül a beágyazott hardveren lehet vele szkripteket futtatni.</div>`,
     },
+    link: "https://micropython.org",
+  },
+  Thonny: {
+    label: { en: "Thonny", hu: "Thonny" },
+    content: {
+      en: `<div>A simple Python IDE for beginners, often used with MicroPython.</div>`,
+      hu: `<div>Egy egyszerű Python IDE kezdőknek, amely gyakran MicroPythonnal együtt használatos.</div>`,
+    },
+    link: "https://docs.mechaxil.com/docs/guides/thonny",
   },
   MOSFET: {
     label: { en: "MOSFET", hu: "MOSFET" },
@@ -153,23 +162,23 @@ export const glossary = {
              alt="MOSFET modul"
              style="max-width:100%;margin-top:0.5rem;" />`,
     },
-    link: "https://mechaxil.com/products/mosfet-with-opto-module?variant=55421310828892",
+    link: "https://docs.mechaxil.com/docs/products/D4184-mosfet-opto-module",
   },
   MT3608: {
     label: { en: "MT3608", hu: "MT3608" },
     content: {
       en: `
         <div>DC-DC boost converter that steps up voltages, for example from 5V to 12V, with adjustable output.</div>
-        <img src="https://mechaxil.com/cdn/shop/files/mt3608-module.jpg?v=1730892014&width=1200"
+        <img src="https://mechaxil.com/cdn/shop/files/StepUp_USBC.webp?v=1758040366&width=1200"
              alt="MT3608 Step-Up Module"
              style="max-width:100%;margin-top:0.5rem;" />`,
       hu: `
         <div>DC-DC step-up konverter, amely képes például 5 V-ról 12 V-ra növelni a feszültséget állítható kimenettel.</div>
-        <img src="https://mechaxil.com/cdn/shop/files/mt3608-module.jpg?v=1730892014&width=1200"
+        <img src="https://mechaxil.com/cdn/shop/files/StepUp_USBC.webp?v=1758040366&width=1200"
              alt="MT3608 step-up modul"
              style="max-width:100%;margin-top:0.5rem;" />`,
     },
-    link: "https://mechaxil.com/products/module-step-up-mt3608",
+    link: "https://mechaxil.com/products/mt3608-2a-dc-dc-step-up-usb-c?variant=55466285728092",
   },
   PETG: {
     label: { en: "PETG", hu: "PETG" },
