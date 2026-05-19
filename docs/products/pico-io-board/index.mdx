@@ -7,7 +7,6 @@ description: Modular Raspberry Pi Pico expansion board for prototyping and embed
 tags: [microcontroller, raspberry-pi, raspberry-pi-pico, raspberry-pi-pico-2]
 image: /img/mechaxil.png
 ---
-
 import {
   Zap,
   LayoutGrid,
@@ -20,6 +19,9 @@ import {
 } from "lucide-react";
 import AudienceSection from '@site/src/components/AudienceSection';
 
+import GlossaryTerm from '@site/src/components/GlossaryTerm';
+
+:::GLOSSARY-AUTO
 <div className="mx-doc-page">
 
 <div className="mx-hero">
@@ -31,10 +33,10 @@ import AudienceSection from '@site/src/components/AudienceSection';
 
     # Pico I/O Board
 
-    ### Modular Raspberry Pi Pico Expansion Board
+    ### Modular <GlossaryTerm term="Raspberry Pi Pico" /> Expansion Board
 
     <p className="mx-muted">
-      The Mechaxil Pico I/O Board expands the Raspberry Pi Pico pins so it's easier to use for prototyping.
+      The Mechaxil Pico I/O Board expands the <GlossaryTerm term="Raspberry Pi Pico" /> pins so it's easier to use for prototyping.
       Designed with usability, readability, and clean aesthetics in mind.
     </p>
 
@@ -159,18 +161,18 @@ import AudienceSection from '@site/src/components/AudienceSection';
         </tr>
       </thead>
       <tbody>
-        <tr><td>Compatible Boards</td><td>Raspberry Pi Pico / Pico 2</td></tr>
+        <tr><td>Compatible Boards</td><td><GlossaryTerm term="Raspberry Pi Pico" /> / Pico 2</td></tr>
         <tr><td>GPIO Access</td><td>Full breakout</td></tr>
         <tr><td>Mounting Holes</td><td>4x M3</td></tr>
         <tr><td>Connector Layout</td><td>Dual male + female headers</td></tr>
-        <tr><td>PCB Color</td><td>Black</td></tr>
+        <tr><td><GlossaryTerm term="PCB" /> Color</td><td>Black</td></tr>
         <tr><td>Use Case</td><td>Prototyping / Integration</td></tr>
       </tbody>
     </table>
   </div>
 
   <div className="mx-section-card">
-    ## Included Hardware / BOM
+    ## Included Hardware / <GlossaryTerm term="BOM" />
 
     <table>
       <thead>
@@ -182,7 +184,7 @@ import AudienceSection from '@site/src/components/AudienceSection';
       </thead>
       <tbody>
         <tr><td>Pico I/O Board</td><td>1</td><td>Yes</td></tr>
-        <tr><td>Raspberry Pi Pico</td><td>1</td><td>Depends on kit</td></tr>
+        <tr><td><GlossaryTerm term="Raspberry Pi Pico" /></td><td>1</td><td>Depends on kit</td></tr>
         <tr><td>M3 Screws</td><td>4</td><td>Depends on kit</td></tr>
       </tbody>
     </table>
@@ -218,15 +220,11 @@ import AudienceSection from '@site/src/components/AudienceSection';
       <a href="https://github.com/Mechaxil/Pico-IO-Board/releases" className="mx-download-card">
         <Download size={18} />
         <div>
-          <strong>PCB Source</strong>
-          <p>KiCad schematic and PCB project</p>
+          <strong><GlossaryTerm term="PCB" /> Source</strong>
+          <p>KiCad schematic and <GlossaryTerm term="PCB" /> project</p>
         </div>
       </a>
     </div>
-
-    :::info
-    Always provide both native CAD and STEP exports for maximum compatibility.
-    :::
 </div>
 
 </AudienceSection>
@@ -235,7 +233,7 @@ import AudienceSection from '@site/src/components/AudienceSection';
   ## Assembly Information
 
     <div className="mx-assembly-list">
-      <div className="mx-step"><span>1</span><div><strong>Insert Raspberry Pi Pico</strong><p>Align pins carefully before installation.</p></div></div>
+      <div className="mx-step"><span>1</span><div><strong>Insert Raspberry Pico </strong><p>Align pins carefully before installation.</p></div></div>
       <div className="mx-step"><span>2</span><div><strong>Connect GPIO</strong><p>Use breakout headers for external wiring.</p></div></div>
       <div className="mx-step"><span>3</span><div><strong>Mount Securely</strong><p>Use M3 hardware for enclosure integration.</p></div></div>
     </div>
@@ -249,7 +247,7 @@ import AudienceSection from '@site/src/components/AudienceSection';
 <div className="mx-section-card">
   ## Getting Started
 
-  Simply install your Raspberry Pi Pico into the Pico I/O Board and begin using all GPIO pins through the breakout layout.
+  Simply install your <GlossaryTerm term="Raspberry Pi Pico" /> into the Pico I/O Board and begin using all GPIO pins through the breakout layout.
 
   The board is designed for:
 
@@ -272,5 +270,4 @@ import AudienceSection from '@site/src/components/AudienceSection';
     Download RoHS Declaration
   </a>
 </div>
-
-<style>{`/* Styles come from the shared CSS file */`}</style>
+:::

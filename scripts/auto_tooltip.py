@@ -8,7 +8,8 @@ def extract_terms(glossary_path: Path) -> list[str]:
     text = glossary_path.read_text(encoding="utf-8")
     keys_dbl = re.findall(r'"([^"]+)"\s*:\s*{', text)
     keys_sgl = re.findall(r"'([^']+)'\s*:\s*{", text)
-    return sorted(set(keys_dbl + keys_sgl), key=len, reverse=True)
+    keys_unquoted = re.findall(r"\b([A-Za-z_][A-Za-z0-9_]*)\s*:\s*{", text)
+    return sorted(set(keys_dbl + keys_sgl + keys_unquoted), key=len, reverse=True)
 
 # ---------- patterns ----------
 GLOSSARY_TAG_PATTERN = re.compile(
@@ -17,7 +18,8 @@ GLOSSARY_TAG_PATTERN = re.compile(
 )
 
 REGION_PATTERN = re.compile(
-    r':::GLOSSARY-AUTO\s*(.*?)\s*:::', re.DOTALL
+    r':::GLOSSARY-AUTO\s*\n(.*?)\n:::\s*(?=\n|$)',
+    re.DOTALL,
 )
 
 def build_term_pattern(term: str):
@@ -25,6 +27,25 @@ def build_term_pattern(term: str):
         rf'(?<![A-Za-z0-9]){re.escape(term)}(?![A-Za-z0-9])',
         re.IGNORECASE,
     )
+
+
+def replace_outside_tags(text: str, pattern: re.Pattern, replacement: str) -> tuple[str, int]:
+    parts = re.split(r'(<[^>]*>)', text)
+    count = 0
+    for i in range(0, len(parts), 2):
+        parts[i], num = pattern.subn(replacement, parts[i])
+        count += num
+    return ''.join(parts), count
+
+
+def resolve_glossary_data_source(path: Path) -> Path | None:
+    text = path.read_text(encoding='utf-8')
+    match = re.search(r"from ['\"]\.\/GlossaryData['\"]", text)
+    if match:
+        candidate = path.parent / 'GlossaryData.js'
+        if candidate.exists():
+            return candidate
+    return None
 
 # ---------- apply inside region ----------
 def apply_glossary_in_file(path: Path, terms: list[str]) -> bool:
@@ -45,12 +66,12 @@ def apply_glossary_in_file(path: Path, terms: list[str]) -> bool:
 
         masked = GLOSSARY_TAG_PATTERN.sub(mask, region)
 
-        # apply replacements
+        # apply replacements outside HTML/JSX tags
         region_changed = False
         for term in terms:
             pat = build_term_pattern(term)
             rep = f'<GlossaryTerm term="{term}" />'
-            masked_new, num = pat.subn(rep, masked)
+            masked_new, num = replace_outside_tags(masked, pat, rep)
             if num > 0:
                 region_changed = True
                 masked = masked_new
@@ -81,11 +102,23 @@ def iter_markdown_files(root: Path):
 
 def main():
     if len(sys.argv) < 3:
-        print("Usage: python apply_glossary_regions.py GlossaryTerm.js docs [more_dirs]")
+        print("Usage: python apply_glossary_regions.py GlossaryData.js docs [more_dirs]")
         sys.exit(1)
 
     glossary_path = Path(sys.argv[1])
     terms = extract_terms(glossary_path)
+
+    if len(terms) == 0 and glossary_path.name.lower().startswith('glossaryterm'):
+        alt_path = resolve_glossary_data_source(glossary_path)
+        if alt_path:
+            print(f"No glossary terms found in {glossary_path}. Trying {alt_path} instead...\n")
+            glossary_path = alt_path
+            terms = extract_terms(glossary_path)
+
+    if len(terms) == 0:
+        print(f"Error: no glossary terms found in {glossary_path}.")
+        print("Pass the glossary data file containing the glossary object, for example src/components/GlossaryData.js.")
+        sys.exit(1)
 
     print(f"Loaded {len(terms)} glossary terms\n")
 

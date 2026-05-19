@@ -9,7 +9,9 @@ sidebar_custom_props:
 ---
 
 import AudienceGate from '@site/src/components/AudienceGate';
+import GlossaryTerm from '@site/src/components/GlossaryTerm';
 
+:::GLOSSARY-AUTO
 <AudienceGate audience="engineer">
 
 <div className="mx-doc-page">
@@ -21,16 +23,16 @@ import AudienceGate from '@site/src/components/AudienceGate';
 | :--- | :--- | :--- | :--- |
 | **Gerber File** | Pico_IO_Boardv1.1_Y30 | **Build Time** | 3 days |
 | **Base Material** | FR-4 | **Layers** | 2 |
-| **Dimension** | 48 mm * 63.5 mm | **PCB Qty** | 10 |
+| **Dimension** | 48 mm * 63.5 mm | **<GlossaryTerm term="PCB" /> Qty** | 10 |
 | **Product Type** | Industrial/Consumer electronics | **Different Design** | 1 |
-| **Delivery Format** | Single PCB | **PCB Thickness** | 1.6mm |
+| **Delivery Format** | Single <GlossaryTerm term="PCB" /> | **<GlossaryTerm term="PCB" /> Thickness** | 1.6mm |
 | **Specify Stackup** | No | **Layer Sequence** | *Not Specified* |
-| **PCB Color** | Black | **Silkscreen** | White |
+| **<GlossaryTerm term="PCB" /> Color** | Black | **Silkscreen** | White |
 | **Material Type** | TG135 | **Via Covering** | Tented |
 | **Surface Finish** | LeadFree HASL | **Deburring/Edge Rounding** | No |
 | **Outer Copper Weight** | 1 oz | **Gold Fingers** | No |
 | **Electrical Test** | Flying Probe Fully Test | **Castellated Holes** | No |
-| **Edge Plating** | No | **Mark on PCB** | Remove Mark |
+| **Edge Plating** | No | **Mark on <GlossaryTerm term="PCB" />** | Remove Mark |
 | **Blind Slot** | No | **Min Via Hole Size/Dia.** | 0.3mm / (0.4/0.45mm) |
 | **Via Plating Method** | Not Specified | **4-Wire Kelvin Test** | No |
 | **Paper between PCBs** | No | **Appearance Quality** | IPC Class 2 Standard |
@@ -41,11 +43,11 @@ import AudienceGate from '@site/src/components/AudienceGate';
 </div>
 
 <div className="mx-section-card">
-  ## BOM & Assembly Information
+  ## <GlossaryTerm term="BOM" /> & Assembly Information
 
 | Item | Quantity | Notes |
 |------|----------|-------|
-| Pico I/O Board | 1 | PCB |
+| Pico I/O Board | 1 | <GlossaryTerm term="PCB" /> |
 |Female Header 01x20 pitch 2.54mm| 2 |  |
 |Male Header 01x20 pitch 2.54mm| 2 | can also use bigger more common sizes such as 01x40 and snap them to fit in size |
 
@@ -60,3 +62,4 @@ import AudienceGate from '@site/src/components/AudienceGate';
 </div>
 
 </AudienceGate>
+:::

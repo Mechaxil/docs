@@ -208,12 +208,12 @@ export const glossary = {
     content: {
       en: `
         <div>A low-cost microcontroller board from Raspberry Pi, based on the RP2040 dual-core ARM Cortex-M0+ chip.</div>
-        <img src="https://mechaxil.com/cdn/shop/files/IMG_20250815_155310.jpg?v=1755350246&width=1200"
+        <img src="https://mechaxil.com/cdn/shop/files/raspberry_pico_1.webp?v=1758040366&width=1200"
              alt="Raspberry Pi Pico"
              style="max-width:100%;margin-top:0.5rem;" />`,
       hu: `
         <div>A Raspberry Pi alacsony költségű mikrokontrolleres panelje, RP2040 kétmagos ARM Cortex-M0+ chippel.</div>
-        <img src="https://mechaxil.com/cdn/shop/files/IMG_20250815_155310.jpg?v=1755350246&width=1200"
+        <img src="https://mechaxil.com/cdn/shop/files/raspberry_pico_1.webp?v=1758040366&width=1200"
              alt="Raspberry Pi Pico"
              style="max-width:100%;margin-top:0.5rem;" />`,
     },
