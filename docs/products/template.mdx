@@ -1,40 +1,73 @@
 ---
 id: template
-title: template
+title: Product documentation template
 sidebar_label: template
 slug: /products/template
 unlisted: true
-description: template
-tags: []
-image: /img/mechaxil.png
+description: Reusable Mechaxil product doc pattern with Maker / Engineer views.
 ---
 
-<img alt="" src="" width="640" />
+import AudienceSection from '@site/src/components/AudienceSection';
+import AudienceGate from '@site/src/components/AudienceGate';
 
-> **SKU:**  • **Brand:**  • **Type:** 
+## Dual-audience pattern
 
+Use the **navbar toggle** (🛠️ Maker / 📐 Engineer). Choice is stored in `localStorage` and synced site-wide via React context.
 
-## Highlights
-- 
+| Component | Use when |
+|-----------|----------|
+| `<AudienceSection audience="maker">` | Show a block only in Maker mode |
+| `<AudienceSection audience="engineer">` | Show a block only in Engineer mode |
+| `<AudienceGate audience="engineer">` | Entire page is engineer-only (shows switch prompt otherwise) |
 
-## Specs
+### Engineer-only sidebar pages
 
-| Field           | Value |
-|-----------------|-------|
-| row1          | test |
-| row2             | test2 |
+Add to frontmatter so the sidebar link hides in Maker mode:
 
-
-## Pinout Diagram
-
-
-
-## Getting Started
-
-```python
-
+```yaml
+sidebar_custom_props:
+  audiences:
+    - engineer
 ```
 
-## More indepth documentation
+---
 
-[Official Documentation]
+<AudienceSection audience="maker">
+
+## Highlights (Maker)
+
+- One-line benefit
+- Quick project idea
+- Link to shop / repo
+
+## Quick start
+
+```python
+# copy-paste example
+```
+
+</AudienceSection>
+
+<AudienceSection audience="engineer">
+
+## Specs (Engineer)
+
+| Parameter | Min | Typ | Max | Unit |
+|-----------|-----|-----|-----|------|
+| Vin | | 5 | | V |
+| Imax | | | | A |
+
+## Assets
+
+- KiCad project
+- STEP / mechanical drawing
+
+</AudienceSection>
+
+<AudienceGate audience="engineer">
+
+## Full engineering page (example)
+
+This block only renders in Engineer mode. Direct links still work; makers see a button to switch modes.
+
+</AudienceGate>

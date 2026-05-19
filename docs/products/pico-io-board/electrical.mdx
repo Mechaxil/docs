@@ -1,0 +1,46 @@
+---
+id: pico-io-board-electrical
+title: Electrical
+description: Electrical design and pinout information.
+slug: /products/pico-io-board/electrical
+---
+
+import AudienceSection from '@site/src/components/AudienceSection';
+
+<div className="mx-doc-page">
+
+
+<div className="mx-section-card">
+  ## Wiring
+
+  The Pico I/O Board is a **pass-through breakout**: each Pico GPIO appears on labeled headers.
+
+ <img src="/img/products/pico-io-board/Pico-IO-Board-illustration.drawio.png" alt="Pico I/O Board pinout diagram" />
+
+  The board doesn't contain any active components, level shifting, or protection circuitry.  
+  It's designed to be simple and easy to use, but be mindful of the electrical characteristics of your Pico and peripherals.
+
+</div>
+
+<AudienceSection audience="engineer">
+
+<div className="mx-section-card">
+  ## Electrical Specifications
+
+  - Voltage: 3.3V logic levels (or 5V if using the 5V pins, but be careful with 5V peripherals, as the Pico's GPIO is not 5V tolerant)
+  - Current: Each pin can source/sink up to 12mA, with a total maximum of 50mA across all pins.
+  - Protection: No built-in protection, so use external components as needed for your application.
+  - GPIO pin to pico-io-board last pin resistance is approximately 0.06Ω.
+
+</div>
+
+<div className="mx-section-card">
+  ## Simplified Schematic
+
+  The board is a simple pass-through with no active components. The schematic is essentially just the pin mapping from the Pico to the headers.
+  <img src="/img/products/pico-io-board/Schematics.jpg" alt="Pico I/O Board simplified schematic" />
+</div>
+
+</AudienceSection>
+
+</div>

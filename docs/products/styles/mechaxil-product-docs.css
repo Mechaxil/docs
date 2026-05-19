@@ -1,0 +1,223 @@
+.mx-doc-page {
+  --mx-product-bg: var(--mx-bg-surface);
+  --mx-product-panel: var(--mx-bg-surface-alt);
+  --mx-product-border: var(--mx-border);
+  --mx-product-text: var(--mx-text-primary);
+  --mx-product-muted: var(--mx-text-secondary);
+  --mx-product-accent: var(--mx-brand-strong);
+  --mx-product-accent-2: var(--mx-brand);
+
+  color: var(--mx-product-text);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.mx-hero,
+.mx-section-card {
+  background: var(--mx-product-panel);
+  border: 1px solid var(--mx-product-border);
+  border-radius: 28px;
+  padding: 32px;
+}
+
+.mx-hero {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 32px;
+  align-items: center;
+  padding: 40px;
+}
+
+.mx-section-card {
+  background: var(--mx-product-panel);
+  padding: 32px;
+  margin: 40px 0;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
+}
+
+.mx-hero img {
+  width: 100%;
+  border-radius: 24px;
+  object-fit: cover;
+  border: 1px solid var(--mx-product-border);
+}
+
+.mx-badge-row {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 18px;
+  flex-wrap: wrap;
+}
+
+.mx-badge,
+.mx-badge-outline {
+  border-radius: 999px;
+  padding: 6px 14px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.mx-badge {
+  background: var(--mx-product-accent);
+  color: white;
+}
+
+.mx-badge-outline {
+  border: 1px solid var(--mx-product-border);
+  color: white;
+}
+
+.mx-muted {
+  color: var(--mx-product-muted);
+  font-size: 1.05rem;
+}
+
+.mx-meta-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-top: 28px;
+}
+
+.mx-meta-grid div {
+  border: 1px solid var(--mx-product-border);
+  border-radius: 18px;
+  padding: 16px;
+  background: var(--mx-product-bg);
+}
+
+.mx-meta-grid span {
+  display: block;
+  color: var(--mx-product-muted);
+  font-size: 0.8rem;
+  margin-bottom: 6px;
+}
+
+.mx-button-row {
+  display: flex;
+  gap: 12px;
+  margin-top: 28px;
+  flex-wrap: wrap;
+}
+
+.mx-feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+}
+
+.mx-feature-card,
+.mx-mini-card,
+.mx-download-card,
+.mx-step,
+.mx-note-box,
+.mx-video-box {
+  border: 1px solid var(--mx-product-border);
+  border-radius: 20px;
+  background: var(--mx-product-bg);
+}
+
+.mx-feature-card,
+.mx-mini-card,
+.mx-download-card,
+.mx-step {
+  display: flex;
+  gap: 14px;
+  padding: 18px;
+}
+
+.mx-feature-card strong,
+.mx-mini-card strong,
+.mx-download-card strong,
+.mx-step strong,
+.mx-section-card strong {
+  color: white;
+}
+
+.mx-feature-card p,
+.mx-mini-card p,
+.mx-download-card p,
+.mx-step p {
+  margin: 4px 0 0;
+  color: var(--mx-product-muted);
+  font-size: 0.9rem;
+}
+
+.mx-two-col-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.mx-image-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.mx-image-grid img {
+  width: 100%;
+  border-radius: 18px;
+  border: 1px solid var(--mx-product-border);
+}
+
+.mx-download-list,
+.mx-assembly-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.mx-download-card {
+  align-items: center;
+  text-decoration: none;
+  color: white;
+}
+
+.mx-download-card:hover {
+  background: rgba(var(--mx-brand-rgb), 0.06);
+  border-color: var(--mx-product-accent-2);
+  text-decoration: none;
+}
+
+.mx-step span {
+  width: 32px;
+  height: 32px;
+  border-radius: 999px;
+  background: var(--mx-product-accent);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  flex-shrink: 0;
+  box-shadow: 0 0 18px rgba(var(--mx-brand-strong-rgb), 0.35);
+}
+
+.mx-note-box,
+.mx-video-box {
+  margin-top: 20px;
+  padding: 18px;
+}
+
+.mx-note-box {
+  color: var(--mx-product-muted);
+  background: rgba(var(--mx-brand-strong-rgb), 0.06);
+}
+
+.mx-video-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(var(--mx-brand-strong-rgb), 0.08);
+}
+
+@media (max-width: 996px) {
+  .mx-hero,
+  .mx-two-col-grid,
+  .mx-image-grid,
+  .mx-meta-grid {
+    grid-template-columns: 1fr;
+  }
+}

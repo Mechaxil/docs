@@ -1,0 +1,35 @@
+---
+id: pico-io-board-firmware
+title: Firmware
+description: Firmware and software support.
+slug: /products/pico-io-board/firmware
+---
+
+import AudienceSection from '@site/src/components/AudienceSection';
+
+<div className="mx-doc-page">
+
+
+<div className="mx-section-card">
+  ## Quick start (MicroPython)
+
+  1. Install [Thonny](https://thonny.org/) and connect your Pico over USB.
+  2. Seat the Pico on the I/O board, then wire your peripheral to labeled **GP** pins.
+  3. Flash MicroPython firmware from Thonny if prompted.
+
+  ```python
+  from machine import Pin
+  import time
+
+  led = Pin(16, Pin.OUT)  # example: GP16
+
+  while True:
+      led.toggle()
+      time.sleep(0.5)
+  ```
+
+  Change `16` to match the silkscreen label you used.
+</div>
+
+
+</div>

@@ -1,0 +1,9 @@
+{
+  "label": "Protocols",
+  "position": 5,
+  "link": {
+    "type": "generated-index",
+    "title": "Mechaxil Protocols",
+    "description": "Reference pages for supported protocols, including pinouts, wiring diagrams, and configuration guides."
+  }
+}
