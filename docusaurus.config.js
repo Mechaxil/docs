@@ -48,6 +48,7 @@ const config = {
         theme: { 
           customCss: [
             './src/css/custom.css',
+            './docs/products/styles/mechaxil-product-docs.css',
           ] 
         },
         sitemap: { changefreq: 'weekly', priority: 0.5, ignorePatterns: ['/tags/**'], filename: 'sitemap.xml' },
@@ -74,12 +75,21 @@ const config = {
 
       image: 'img/mechaxil-og.jpg',
 
+      announcementBar: {
+        id: 'incomplete-docs',
+        content: '⚠️ This documentation is incomplete and under development.',
+        backgroundColor: 'var(--mx-brand)',
+        textColor: 'var(--mx-text-inverse)',
+        isCloseable: false,
+      },
+
       navbar: {
         title: ' ',
         logo: { alt: 'My Site Logo', src: 'img/Mechaxil.png' },
         items: [
           { type: 'docSidebar', sidebarId: 'mainSidebar', position: 'left', label: 'Documentations' },
           { to: '/blog', label: 'Blog', position: 'left' },
+          { type: 'custom-audience-toggle', position: 'right' },
           { href: 'https://mechaxil.com', label: 'Webshop', position: 'right' },
           { type: 'localeDropdown', position: 'right' },
         ],
